@@ -16,14 +16,18 @@ import "../styles/style.css";
 const IndexPage = () => {
   // tuts state
   const [tuts, setTuts] = useState(data);
-  console.log(tuts);
+  // console.log(tuts);
 
   return (
     <Layout pageTitle="Home Page">
       <h2 id="title">TUTORIALS</h2>
       {/* list of tuts */}
-      {tuts.map((tut, id) => {
-        return <Tutcard tut={tut} key={id} />;
+      {tuts.map((tut, key) => {
+        return (
+          <div clasddName="tutCard-container" key={key}>
+            <Tutcard tut={tut} />
+          </div>
+        );
       })}
     </Layout>
   );

@@ -9,7 +9,7 @@ This is a repo for the training center demo which is a qualification task for th
 - [x] A link to the repository.
 - [x] A link to its rendered webpage.
 - [x] A link to the video playlist (if present)
-
+- [X] Style the website.
 ## Goal-2 (Filtering)
 - [ ] status: stable/beta/alpha dropdown.
 - [ ] videos: available or not checkbox.
