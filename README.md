@@ -15,8 +15,8 @@ This is a repo for the training center demo which is a qualification task for th
 - [ ] videos: available or not checkbox.
 
 ## Goal-3 (Simple stretch goals)
-- [ ] Add a field hero-image to each module and show an image next to the training module (similar to how it’s done on learn.astropy)
-- [ ] Add a simple visual cue based on the status of the module (could be an icon, a choice of color, …)
+- [x] Add a field hero-image to each module and show an image next to the training module (similar to how it’s done on learn.astropy)
+- [x] Add a simple visual cue based on the status of the module (could be an icon, a choice of color, …)
 - [ ] Add alt-texts to the filtering menus from the previous list of tasks.
 
 ## Goal-4 (Slightly more involved stretch goals)

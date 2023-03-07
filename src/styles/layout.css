@@ -3,6 +3,7 @@ nav {
   color: #fff;
   text-align: center;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   height: 3rem;
 }
@@ -59,4 +60,45 @@ main {
   max-width: calc(min(100%, 1000px) - 2rem);
   background: #e5e5e5;
   min-height: 100vh;
+}
+
+footer {
+  margin-top: 3rem;
+  background: #374151;
+  padding: 2rem 3rem;
+  color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  nav .container {
+    margin: auto 1rem;
+  }
+  nav ul {
+    width: 5rem;
+  }
+  nav ul li a {
+    font-size: 0.8rem;
+  }
+  .hero {
+    padding: 1rem;
+  }
+  .hero h2 {
+    font-size: 1.1rem;
+  }
+  .hero p {
+    font-size: 0.8rem;
+  }
+  footer {
+    padding: 1rem 2rem;
+  }
 }

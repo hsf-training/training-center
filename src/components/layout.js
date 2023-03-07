@@ -6,6 +6,9 @@ import { Link } from "gatsby";
 import "../styles/globalStyle.css";
 import "../styles/layout.css";
 
+// components
+import Footer from "./footer";
+
 // markup
 const Layout = ({ pageTitle, children }) => {
   return (
@@ -16,12 +19,14 @@ const Layout = ({ pageTitle, children }) => {
       {/* navbar */}
       <nav>
         <div className="container">
-          <StaticImage
-            className="img"
-            src="../images/logo.png"
-            height={30}
-            alt="logo"
-          ></StaticImage>
+          <a href="/">
+            <StaticImage
+              className="img"
+              src="../images/logo.png"
+              height={30}
+              alt="logo"
+            ></StaticImage>
+          </a>
         </div>
         <div className="container">
           <ul className="navLinks">
@@ -31,9 +36,9 @@ const Layout = ({ pageTitle, children }) => {
               </Link>
             </li>
             <li className="navLinkItem">
-              <Link to="/about" className="navLinkText">
+              <a href="https://www.astropy.org/" className="navLinkText">
                 About
-              </Link>
+              </a>
             </li>
           </ul>
         </div>
@@ -51,6 +56,7 @@ const Layout = ({ pageTitle, children }) => {
 
       {/* main */}
       <main>{children}</main>
+      <Footer />
     </>
   );
 };
