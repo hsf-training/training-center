@@ -1,20 +1,34 @@
-import * as React from 'react'
-import Layout from '../components/layout'
-import { StaticImage } from 'gatsby-plugin-image'
-import Seo from '../components/seo'
+// modules
+import * as React from "react";
+import { useState } from "react";
 
+import Seo from "../components/seo";
+
+// coponents
+import data from "../../data/data.yaml";
+import Layout from "../components/layout";
+import Tutcard from "../components/tutcard";
+
+// styles
+import "../styles/style.css";
+
+// markup
 const IndexPage = () => {
+  // tuts state
+  const [tuts, setTuts] = useState(data);
+  console.log(tuts);
+
   return (
     <Layout pageTitle="Home Page">
-      <p>I'm making this by following the Gatsby Tutorial.</p>
-      <StaticImage
-        alt="Clifford, a reddish-brown pitbull, dozing in a bean bag chair"
-        src="../images/clifford.jpg"
-      />
+      <h2 id="title">TUTORIALS</h2>
+      {/* list of tuts */}
+      {tuts.map((tut, id) => {
+        return <Tutcard tut={tut} key={id} />;
+      })}
     </Layout>
-  )
-}
+  );
+};
 
-export const Head = () => <Seo title="Home Page" />
+export const Head = () => <Seo title="Home Page" />;
 
-export default IndexPage
+export default IndexPage;
