@@ -8,8 +8,6 @@ import "../styles/tutCard.css";
 // components
 import { AiFillGithub } from "react-icons/ai";
 import { MdVideoLibrary } from "react-icons/md";
-import { MdCloudDone } from "react-icons/md";
-import { TbAlpha, TbBeta } from "react-icons/tb";
 
 // markup
 const Tutcard = ({ tut }) => {
@@ -30,7 +28,7 @@ const Tutcard = ({ tut }) => {
 
       <div className="tutCardImg">
         <StaticImage
-          className="img"
+          className="hero-img"
           src="../images/clifford.jpg"
           height={300}
           alt={tut.name}
@@ -57,15 +55,7 @@ const Tutcard = ({ tut }) => {
             ? "beta"
             : "alpha"
         }
-      >
-        {tut.status == "stable" ? (
-          <MdCloudDone />
-        ) : tut.status == "beta" ? (
-          <TbBeta />
-        ) : (
-          <TbAlpha />
-        )}
-      </div>
+      ></div>
     </div>
   );
 };

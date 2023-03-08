@@ -11,8 +11,8 @@ This is a repo for the training center demo which is a qualification task for th
 - [x] A link to the video playlist (if present)
 - [X] Style the website.
 ## Goal-2 (Filtering)
-- [ ] status: stable/beta/alpha dropdown.
-- [ ] videos: available or not checkbox.
+- [x] status: stable/beta/alpha dropdown.
+- [x] videos: available or not checkbox.
 
 ## Goal-3 (Simple stretch goals)
 - [x] Add a field hero-image to each module and show an image next to the training module (similar to how it’s done on learn.astropy)

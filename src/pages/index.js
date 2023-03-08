@@ -10,25 +10,21 @@ import Tutcard from "../components/tutCard";
 
 // styles
 import "../styles/style.css";
+import Filter from "../components/filters";
 
 // markup
 const IndexPage = () => {
-  // tuts state
+  // states
   const [tuts, setTuts] = useState(data);
-  // console.log(tuts);
 
   return (
     <Layout pageTitle="Home Page">
+      {/* heading */}
       <h2 id="title">TUTORIALS</h2>
-      {/* Filter */}
-      {/* <div className="filters-container">
-        <div className="filter">
-          <section>
-            <h3>Filter by Status</h3>
-            <div className="filter-options"></div>
-          </section>
-        </div>
-      </div> */}
+
+      {/* filter */}
+      <Filter setTuts={setTuts} />
+
       {/* list of tuts */}
       {tuts.map((tut, key) => {
         return (

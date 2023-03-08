@@ -4,16 +4,3 @@
   margin-top: 2rem;
   color: #4b5563;
 }
-
-.filters-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 1rem;
-}
-
-.filters-container .filter {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}

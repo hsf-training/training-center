@@ -1,0 +1,139 @@
+.filters {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.filters h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #4b5563;
+  margin: 0.5rem;
+}
+
+.filters .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.text-query {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.2rem;
+}
+
+.text-query input {
+  width: 100%;
+  height: 2rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  padding: 0 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #4b5563;
+}
+
+.status-query {
+  width: auto;
+  margin: 0.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.status-query div {
+  width: 100%;
+  background: #fff;
+  border-radius: 5px;
+}
+
+.status-query .chip {
+  height: 1.5rem;
+  font-size: 0.6rem;
+  margin: 0.1rem 0.2rem;
+  padding: 0rem 0.5rem;
+  background: #fca311;
+}
+
+.status-query .highlightOption {
+  background: #fca311;
+  color: #fff;
+}
+.status-query .optionListContainer {
+  font-size: 0.8rem;
+}
+
+.status-query .optionListContainer ul li {
+  padding: 0.3rem;
+}
+
+.status-query .optionListContainer ul li:hover {
+  background: #fca311;
+}
+
+.videos-query {
+  transform: scale(2) translateX(-25%);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 3rem;
+}
+
+.videos-query label {
+  font-size: 0.4rem !important;
+  font-weight: 400;
+  color: #4b5563;
+}
+
+.videos-query input[type="checkbox"] {
+  position: relative;
+  appearance: none;
+  width: 1rem;
+  height: 0.5rem;
+  background: #ccc;
+  border-radius: 50px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.videos-query input:checked[type="checkbox"] {
+  background: #fca311;
+}
+
+.videos-query input[type="checkbox"]::after {
+  position: absolute;
+  content: "";
+  width: 0.5rem;
+  height: 0.5rem;
+  top: 0;
+  left: 0;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  transform: scale(1.1);
+  transition: 0.4s;
+}
+
+.videos-query input:checked[type="checkbox"]::after {
+  left: 50%;
+}
+
+@media screen and (max-width: 768px) {
+  .filters {
+    flex-direction: column;
+  }
+  .text-query {
+    width: 100%;
+  }
+  .status-query {
+    width: 100%;
+  }
+  .videos-query {
+    margin: 0.5rem;
+    transform: scale(2) translateX(25%);
+  }
+}
