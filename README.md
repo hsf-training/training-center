@@ -1,17 +1,19 @@
 # Training Center Demo
+![image](https://user-images.githubusercontent.com/76243585/223699819-82e0deb3-0118-4d82-90f7-2efb45152343.png)
 
+## About
 This is a repo for the training center demo which is a qualification task for the actual project that is proposed by the CERN-HSF in GSoC 2023.
 
 ## Tasks
----
-### Goal-1 (Basic)
 
+### Goal-1 (Basic)
 - [x] Title (name field)
 - [x] Description
 - [x] A link to the repository.
 - [x] A link to its rendered webpage.
 - [x] A link to the video playlist (if present)
 - [X] Style the website.
+
 ### Goal-2 (Filtering)
 - [x] status: stable/beta/alpha dropdown.
 - [x] videos: available or not checkbox.
@@ -37,7 +39,6 @@ This is a repo for the training center demo which is a qualification task for th
 <br>
 
 ## How to run the project
----
 ### Clone the repo
 ```bash
 git clone https://github.com/Aniumbott/demo-training-center.git
@@ -54,5 +55,4 @@ npm run develop
 Thats it ! 🎉
 
 ## Regards
----
 Thank you [Kilian Lieret](https://github.com/klieret) for this opportunity, can't wait for the results and hope to get in touch soon.
