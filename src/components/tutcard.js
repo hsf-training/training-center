@@ -13,45 +13,52 @@ import { MdVideoLibrary } from "react-icons/md";
 const Tutcard = ({ tut }) => {
   return (
     <div className="tutCard">
+      {/* GitHub and Videos links */}
       <div className="additionals">
-        {tut.repository != "" ? (
-          <a title="GitHub Repo" target="_blank" href={tut.repository}>
+        {tut.repository !== "" ? (
+          <a title="GitHub Repo" href={tut.repository}>
             <AiFillGithub height={300} />
           </a>
         ) : null}
-        {tut.videos != "" ? (
-          <a title="Videos" target="_blank" href={tut.videos}>
+        {tut.videos !== "" ? (
+          <a title="Videos" href={tut.videos}>
             <MdVideoLibrary height={300} />
           </a>
         ) : null}
       </div>
 
+      {/* hero-image */}
       <div className="tutCardImg">
         <StaticImage
-          className="hero-img"
+          className="hero-image"
           src="../images/clifford.jpg"
           height={300}
           alt={tut.name}
         ></StaticImage>
       </div>
+
+      {/* texts */}
       <div className="tutCardText">
-        <a title={tut.name} target="_blank" href={tut.webpage}>
+        {/* title */}
+        <a title={tut.name} href={tut.webpage}>
           <h3>{ReactHtmlParser(tut.name)}</h3>
         </a>
+
+        {/* description */}
         <p>{ReactHtmlParser(tut.description)}</p>
       </div>
       <div
         className={`status ${
-          tut.status == "stable"
+          tut.status === "stable"
             ? "stable"
-            : tut.status == "beta"
+            : tut.status === "beta"
             ? "beta"
             : "alpha"
         }`}
         title={
-          tut.status == "stable"
+          tut.status === "stable"
             ? "stable"
-            : tut.status == "beta"
+            : tut.status === "beta"
             ? "beta"
             : "alpha"
         }

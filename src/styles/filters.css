@@ -17,7 +17,7 @@
   align-items: center;
 }
 
-.text-query {
+.text-input {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -25,9 +25,9 @@
   margin: 0.2rem;
 }
 
-.text-query input {
+.text-input input {
   width: 100%;
-  height: 2rem;
+  height: 2.5rem;
   border: 1px solid #ccc;
   border-radius: 0.25rem;
   padding: 0 0.5rem;
@@ -36,45 +36,29 @@
   color: #4b5563;
 }
 
-.status-query {
-  width: auto;
+.text-input input:focus {
+  border: 2px solid #2684ff;
+}
+
+.curicula-input,
+.status-input {
+  max-width: 25rem;
+  font-size: 0.8rem;
   margin: 0.2rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
 }
 
-.status-query div {
-  width: 100%;
-  background: #fff;
-  border-radius: 5px;
-}
-
-.status-query .chip {
-  height: 1.5rem;
-  font-size: 0.6rem;
-  margin: 0.1rem 0.2rem;
-  padding: 0rem 0.5rem;
-  background: #fca311;
-}
-
-.status-query .highlightOption {
-  background: #fca311;
-  color: #fff;
-}
-.status-query .optionListContainer {
+.curicula-input label,
+.status-input label {
   font-size: 0.8rem;
+  font-weight: 400;
+  color: #4b5563;
+  margin: 0.2rem;
 }
 
-.status-query .optionListContainer ul li {
-  padding: 0.3rem;
-}
-
-.status-query .optionListContainer ul li:hover {
-  background: #fca311;
-}
-
-.videos-query {
+.videos-input {
   transform: scale(2) translateX(-25%);
   display: flex;
   justify-content: space-around;
@@ -82,13 +66,13 @@
   width: 3rem;
 }
 
-.videos-query label {
-  font-size: 0.4rem !important;
+.videos-input label {
+  font-size: 0.4rem;
   font-weight: 400;
   color: #4b5563;
 }
 
-.videos-query input[type="checkbox"] {
+.videos-input input[type="checkbox"] {
   position: relative;
   appearance: none;
   width: 1rem;
@@ -100,11 +84,11 @@
   transition: 0.4s;
 }
 
-.videos-query input:checked[type="checkbox"] {
-  background: #fca311;
+.videos-input input:checked[type="checkbox"] {
+  background: #2684ff;
 }
 
-.videos-query input[type="checkbox"]::after {
+.videos-input input[type="checkbox"]::after {
   position: absolute;
   content: "";
   width: 0.5rem;
@@ -118,7 +102,7 @@
   transition: 0.4s;
 }
 
-.videos-query input:checked[type="checkbox"]::after {
+.videos-input input:checked[type="checkbox"]::after {
   left: 50%;
 }
 
@@ -126,13 +110,15 @@
   .filters {
     flex-direction: column;
   }
-  .text-query {
+  .text-input {
     width: 100%;
   }
-  .status-query {
+  .status-input,
+  .curicula-input {
+    max-width: 100%;
     width: 100%;
   }
-  .videos-query {
+  .videos-input {
     margin: 0.5rem;
     transform: scale(2) translateX(25%);
   }

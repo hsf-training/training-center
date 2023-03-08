@@ -19,7 +19,7 @@ const Layout = ({ pageTitle, children }) => {
       {/* navbar */}
       <nav>
         <div className="container">
-          <a href="/">
+          <a title="Learn.Astropy" href="/">
             <StaticImage
               className="img"
               src="../images/logo.png"
@@ -31,12 +31,12 @@ const Layout = ({ pageTitle, children }) => {
         <div className="container">
           <ul className="navLinks">
             <li className="navLinkItem">
-              <Link to="/" className="navLinkText">
+              <Link to="/" title="Home" className="navLinkText">
                 Home
               </Link>
             </li>
             <li className="navLinkItem">
-              <a href="https://www.astropy.org/" className="navLinkText">
+              <a href="https://www.astropy.org/" title="About" className="navLinkText">
                 About
               </a>
             </li>

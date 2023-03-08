@@ -1,0 +1,59 @@
+- name: "Basic"
+  description: "Basic skills for HEP software development."
+  tuts:
+    - id: unix
+    - id: git
+    - id: python
+    - id: ssh
+    - id: ml
+    - id: matplotlib
+    - id: root
+- name: "Software Development and Deployment"
+  description: "Software development and deployment."
+  tuts:
+    - id: git
+    - id: advancedgit
+    - id: cicd
+    - id: cicdgithub
+    - id: docker
+    - id: singularity
+    - id: testingpython
+    - id: levelupyourpython
+- name: "C++ corner"
+  description: "C++ corner."
+  tuts:
+    - id: hepcpp
+    - id: cmake
+- name: "Data Analysis"
+  description: "Machine learning and other analysis tools"
+  tuts:
+    - id: ml
+    - id: gpuml
+- name: "HEP specific tools"
+  description: "Workflows and reproducibility"
+  tuts:
+    - id: scikithep
+    - id: root
+- name: "Analysis preservation"
+  description: "Analysis preservation"
+  tuts:
+    - id: git
+    - id: cicd
+    - id: cicdgithub
+    - id: docker
+    - id: singularity
+    - id: testingpython
+- name: "Miscellaneous"
+  description: "Parallel programming"
+  tuts:
+    - id: simpleanalysis
+- name: "Planned, in early development, or archived"
+  description: "Planned, in early development, or archived"
+  tuts:
+    - id: uproot
+    - id: grid
+    - id: parallel
+    - id: alpaka
+    - id: yadagereana
+    - id: doc
+    - id: generators

@@ -14,7 +14,7 @@ import Filter from "../components/filters";
 
 // markup
 const IndexPage = () => {
-  // states
+  // tuts state
   const [tuts, setTuts] = useState(data);
 
   return (
@@ -26,13 +26,23 @@ const IndexPage = () => {
       <Filter setTuts={setTuts} />
 
       {/* list of tuts */}
-      {tuts.map((tut, key) => {
-        return (
-          <div className="tutCard-container" key={key}>
-            <Tutcard tut={tut} />
+      <div className="tuts-container">
+        {tuts.length === 0 ? (
+          // if no tuts found
+          <div className="no-tuts">
+            <p>No Tutorials Found.</p>
           </div>
-        );
-      })}
+        ) : (
+          // if tuts found
+          tuts.map((tut, key) => {
+            return (
+              <div className="tutCard-container" key={key}>
+                <Tutcard tut={tut} />
+              </div>
+            );
+          })
+        )}
+      </div>
     </Layout>
   );
 };

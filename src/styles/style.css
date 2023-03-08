@@ -1,6 +1,22 @@
 #title {
+  width: 100%;
   font-size: 1.3rem;
   font-weight: 600;
   margin-top: 2rem;
-  color: #4b5563;
+  background: #4b5563aa;
+  padding: 0.3rem 0.5rem;
+  color: #fff;
+}
+
+.no-tuts {
+  width: 100%;
+  height: 20rem;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 600;
+  color: #4b556344;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
