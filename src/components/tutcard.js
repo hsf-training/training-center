@@ -13,20 +13,6 @@ import { MdVideoLibrary } from "react-icons/md";
 const Tutcard = ({ tut }) => {
   return (
     <div className="tutCard">
-      {/* GitHub and Videos links */}
-      <div className="additionals">
-        {tut.repository !== "" ? (
-          <a title="GitHub Repo" href={tut.repository}>
-            <AiFillGithub height={300} />
-          </a>
-        ) : null}
-        {tut.videos !== "" ? (
-          <a title="Videos" href={tut.videos}>
-            <MdVideoLibrary height={300} />
-          </a>
-        ) : null}
-      </div>
-
       {/* hero-image */}
       <div className="tutCardImg">
         <StaticImage
@@ -40,12 +26,27 @@ const Tutcard = ({ tut }) => {
       {/* texts */}
       <div className="tutCardText">
         {/* title */}
-        <a title={tut.name} href={tut.webpage}>
-          <h3>{ReactHtmlParser(tut.name)}</h3>
-        </a>
+        <h3>{ReactHtmlParser(tut.name)}</h3>
 
         {/* description */}
         <p>{ReactHtmlParser(tut.description)}</p>
+        
+        {/* additional links */} 
+        <p>
+        <a title="Learn" href={tut.webpage}>
+          Learn!
+        </a>
+        {tut.videos !== "" ? (
+          <a title="Videos" href={tut.videos}>
+            <MdVideoLibrary height={300} /> Watch!
+          </a>
+        ) : null}
+        {tut.repository !== "" ? (
+          <a title="GitHub Repo" href={tut.repository}>
+            <AiFillGithub height={300} /> Contribute!
+          </a>
+        ) : null}
+        </p>
       </div>
       <div
         className={`status ${
