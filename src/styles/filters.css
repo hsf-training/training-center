@@ -41,7 +41,8 @@
 }
 
 .curicula-input,
-.status-input {
+.status-input,
+.language-input {
   max-width: 25rem;
   font-size: 0.8rem;
   margin: 0.2rem;
@@ -51,7 +52,8 @@
 }
 
 .curicula-input label,
-.status-input label {
+.status-input label ,
+.langualge-input label {
   font-size: 0.8rem;
   font-weight: 400;
   color: #4b5563;
