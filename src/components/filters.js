@@ -31,10 +31,11 @@ const Filters = ({ setTuts }) => {
 
   // status filter options
   const [statusFilter, setStatusFilter] = useState([
-    { label: "Stable", value: "stable" },
+    { label: "Stable", value: "stable", isDefault: true },
     { label: "Beta", value: "beta" },
     { label: "Alpha", value: "alpha" },
   ]);
+
 
   // filter the tuts data on every update of query state
   useEffect(() => {
@@ -124,6 +125,7 @@ const Filters = ({ setTuts }) => {
               options={statusFilter}
               isClearable={true}
               placeholder="Status..."
+              defaultValue={statusFilter.find((option) => option.isDefault)}
               onChange={(e) => {
                 setQuery({ ...query, status: e.map((e) => e.value) });
               }}
