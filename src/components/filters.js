@@ -18,6 +18,7 @@ const Filters = ({ setTuts }) => {
   const [query, setQuery] = useState({
     text: "",
     status: [],
+    language: [],
     video: false,
     curiculum: {},
   });
@@ -34,6 +35,13 @@ const Filters = ({ setTuts }) => {
     { label: "Stable", value: "stable" },
     { label: "Beta", value: "beta" },
     { label: "Alpha", value: "alpha" },
+  ]);
+
+  // language filter options
+  const [languageFilter, setLanguageFilter] = useState([
+    { label: "C++", value: "cpp" },
+    { label: "Python", value: "python" },
+    { label: "Other", value: "other" },
   ]);
 
   // filter the tuts data on every update of query state
@@ -54,6 +62,12 @@ const Filters = ({ setTuts }) => {
     if (query.status.length !== 0) {
       filteredTuts = filteredTuts.filter((tut) => {
         return query.status.includes(tut.status);
+      });
+    }
+
+    if (query.language.length !== 0) {
+      filteredTuts = filteredTuts.filter((tut) => {
+        return query.language.includes(tut.language);
       });
     }
 
@@ -126,6 +140,21 @@ const Filters = ({ setTuts }) => {
               placeholder="Status..."
               onChange={(e) => {
                 setQuery({ ...query, status: e.map((e) => e.value) });
+              }}
+            />
+          </div>
+
+          {/* language-input */}
+          <div className="language-input" title="Language">
+            <Select
+              className="select"
+              closeMenuOnSelect={false}
+              isMulti
+              options={languageFilter}
+              isClearable={true}
+              placeholder="Language..."
+              onChange={(e) => {
+                setQuery({ ...query, language: e.map((e) => e.value) });
               }}
             />
           </div>
