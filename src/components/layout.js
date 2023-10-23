@@ -19,7 +19,7 @@ const Layout = ({ pageTitle, children }) => {
       {/* navbar */}
       <nav>
         <div className="container">
-          <a title="Learn.Astropy" href="/">
+          <a title="Remodel HSF Training Center" href="/">
             <StaticImage
               className="img"
               src="../images/logo.png"
@@ -50,7 +50,7 @@ const Layout = ({ pageTitle, children }) => {
         <p>
           Learn how to use Python for astronomy through tutorials and guides
           that cover Astropy and other packages in the astronomy Python
-          ecosystem.
+          ecosystem.....
         </p>
       </div>
 
