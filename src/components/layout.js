@@ -24,14 +24,14 @@ const Layout = ({ pageTitle, children }) => {
               className="img"
               src="../images/hsf.svg"
               height={30}
-              style={{ position: "relative", top: "10px", left: "30px" }}
+              style={{ position: "absolute", top: "10px", left: "30px" }}
               alt="hsf logo"
             ></StaticImage>
             <StaticImage
               className="img"
               src="../images/iris-hep.svg"
               height={200}
-              style={{ position: "relative", top: "-22px", left: "30px" }}
+              style={{ position: "absolute", top: "-22px", left: "50px" }}
               alt="iris hep logo" 
             ></StaticImage>
           </a>
@@ -56,7 +56,7 @@ const Layout = ({ pageTitle, children }) => {
       <div className="hero">
         <h2>LEARN TO CODE</h2>
         <p>
-          Learn how to use Python and a lot more....
+          Learn how to use Python and a lot more for HEP....
         </p>
       </div>
 
