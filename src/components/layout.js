@@ -22,9 +22,17 @@ const Layout = ({ pageTitle, children }) => {
           <a title="Remodel HSF Training Center" href="/">
             <StaticImage
               className="img"
-              src="../images/logo.png"
+              src="../images/hsf.svg"
               height={30}
-              alt="logo"
+              style={{ position: "relative", top: "10px", left: "30px" }}
+              alt="hsf logo"
+            ></StaticImage>
+            <StaticImage
+              className="img"
+              src="../images/iris-hep.svg"
+              height={200}
+              style={{ position: "relative", top: "-22px", left: "30px" }}
+              alt="iris hep logo" 
             ></StaticImage>
           </a>
         </div>
@@ -36,7 +44,7 @@ const Layout = ({ pageTitle, children }) => {
               </Link>
             </li>
             <li className="navLinkItem">
-              <a href="https://www.astropy.org/" title="About" className="navLinkText">
+              <a href="https://hepsoftwarefoundation.org/" title="About" className="navLinkText">
                 About
               </a>
             </li>
@@ -46,11 +54,9 @@ const Layout = ({ pageTitle, children }) => {
 
       {/* hero div */}
       <div className="hero">
-        <h2>LERN ASTROPY</h2>
+        <h2>LEARN TO CODE</h2>
         <p>
-          Learn how to use Python for astronomy through tutorials and guides
-          that cover Astropy and other packages in the astronomy Python
-          ecosystem.....
+          Learn how to use Python and a lot more....
         </p>
       </div>
 

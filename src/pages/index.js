@@ -8,6 +8,7 @@ import data from "../../data/data.yaml";
 import Layout from "../components/layout";
 import Tutcard from "../components/tutCard";
 
+
 // styles
 import "../styles/style.css";
 import Filter from "../components/filters";
@@ -16,6 +17,12 @@ import Filter from "../components/filters";
 const IndexPage = () => {
   // tuts state
   const [tuts, setTuts] = useState(data);
+  const [isFilterActive, setFilterActive] = useState(false);
+
+  const handleFilterChange = () => {
+      setFilterActive(!isFilterActive);
+      // Implement your filtering logic here
+  };
 
   return (
     <Layout pageTitle="Home Page">
