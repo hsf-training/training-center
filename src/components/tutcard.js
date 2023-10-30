@@ -18,11 +18,15 @@ const Tutcard = ({ tut }) => {
         {tut.repository !== "" ? (
           <a title="GitHub Repo" href={tut.repository}>
             <AiFillGithub height={300} />
+            <span style={{ marginLeft: "8px" }}>GitHub</span>
           </a>
         ) : null}
+      </div>
+      <div className="videos">
         {tut.videos !== "" ? (
           <a title="Videos" href={tut.videos}>
             <MdVideoLibrary height={300} />
+            <span style={{ marginLeft: "8px" }}>Videos</span>
           </a>
         ) : null}
       </div>

@@ -65,7 +65,7 @@ code {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: #4b5563;
 }
 
@@ -74,6 +74,25 @@ code {
 }
 
 .tutCard .additionals a:hover {
+  color: #fca311;
+}
+
+.tutCard .videos {
+  position: absolute;
+  top: 2.5rem;
+  right: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-size: 1.2rem;
+  color: #4b5563;
+}
+
+.tutCard .videos a {
+  margin: 0 0.25rem;
+}
+
+.tutCard .videos a:hover {
   color: #fca311;
 }
 
