@@ -44,7 +44,7 @@ const Layout = ({ pageTitle, children }) => {
               </Link>
             </li>
             <li className="navLinkItem">
-              <a href="https://hepsoftwarefoundation.org/" title="About" className="navLinkText">
+              <a href="https://hepsoftwarefoundation.org/" target="_blank" rel="noopener noreferrer" title="About" className="navLinkText">
                 About
               </a>
             </li>
@@ -56,7 +56,7 @@ const Layout = ({ pageTitle, children }) => {
       <div className="hero">
         <h2>LEARN TO CODE</h2>
         <p>
-          Learn how to use Python and a lot more for HEP....
+          Training and educational material for the high energy physics community.
         </p>
       </div>
 
