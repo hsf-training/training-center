@@ -11,13 +11,19 @@ import { MdVideoLibrary } from "react-icons/md";
 
 // markup
 const Tutcard = ({ tut }) => {
+  const iconStyleGit={
+      color:'#000000',
+  };
+  const iconStyleVid={
+      color:'#FF0000',
+  };
   return (
     <div className="tutCard">
       {/* GitHub and Videos links */}
       <div className="additionals">
         {tut.repository !== "" ? (
           <a title="GitHub Repo" href={tut.repository}>
-            <AiFillGithub height={300} />
+            <AiFillGithub height={300} style={iconStyleGit}/>
             <span style={{ marginLeft: "8px" }}>GitHub</span>
           </a>
         ) : null}
@@ -25,7 +31,7 @@ const Tutcard = ({ tut }) => {
       <div className="videos">
         {tut.videos !== "" ? (
           <a title="Videos" href={tut.videos}>
-            <MdVideoLibrary height={300} />
+            <MdVideoLibrary height={300} style={iconStyleVid}/>
             <span style={{ marginLeft: "8px" }}>Videos</span>
           </a>
         ) : null}

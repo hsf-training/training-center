@@ -38,6 +38,7 @@ code {
 }
 .tutCard .tutCardText {
   max-width: 60%;
+  color: #0077cc;
 }
 
 .tutCard .tutCardText p {
@@ -60,8 +61,8 @@ code {
 
 .tutCard .additionals {
   position: absolute;
-  top: 0.8rem;
-  right: 0.8rem;
+  bottom: 0.3rem;
+  left: 11.6rem;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -79,8 +80,8 @@ code {
 
 .tutCard .videos {
   position: absolute;
-  top: 2.5rem;
-  right: 0.8rem;
+  bottom: 0.3rem;
+  left: 22rem;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -140,7 +141,15 @@ code {
     width: 100%;
     position: relative;
     justify-content: flex-start;
-    top: 0;
-    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  .tutCard .videos {
+    width: 100%;
+    position: relative;
+    justify-content: flex-start;
+    bottom: 10;
+    left: 0;
   }
 }

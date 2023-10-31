@@ -12,8 +12,8 @@ const Footer = () => {
         <a href="/">
           {" "}
           <StaticImage
-            src="../images/logo.png"
-            height={30}
+            src="../images/hsf.svg"
+            height={60}
             alt="logo"
           ></StaticImage>
         </a>
