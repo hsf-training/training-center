@@ -6,7 +6,7 @@ Implemented by Aniket as GSoC qualification task.
 
 ```bash
 # once
-npm install
+npm install --force
 # always
 npm run develop
 ```
