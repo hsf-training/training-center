@@ -42,8 +42,8 @@ const Filters = ({ setTuts }) => {
 
   // level filter options
   const [levelFilter, setLevelFilter] = useState([
-    { label: "Beginner", value: "beginner", },
-    { label: "Advanced", value: "advanced", },
+    { label: "Beginner", value: "beginner", isDefault: true},
+    { label: "Advanced", value: "advanced", isDefault: true},
   ]);
 
 
@@ -149,7 +149,7 @@ const Filters = ({ setTuts }) => {
               options={levelFilter}
               isClearable={true}
               placeholder="Level..."
-              defaultValue={levelFilter.find((option) => option.isDefault)}
+              defaultValue={levelFilter.filter((option) => option.isDefault)}
               onChange={(e) => {
                 setQuery({ ...query, level: e.map((e) => e.value) });
               }}
