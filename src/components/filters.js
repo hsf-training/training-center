@@ -20,7 +20,11 @@ const Filters = ({ setTuts }) => {
     status: [],
     video: false,
     curiculum: {},
+    level: [],
   });
+
+  // Define the options displayed in the filter UI elements
+  // ------------------------------------------------------
 
   // curicula filter options
   const [curiculaFilter, setCuriculaFilter] = useState(
@@ -36,12 +40,20 @@ const Filters = ({ setTuts }) => {
     { label: "Alpha", value: "alpha" },
   ]);
 
+  // level filter options
+  const [levelFilter, setLevelFilter] = useState([
+    { label: "Beginner", value: "beginner", },
+    { label: "Advanced", value: "advanced", },
+  ]);
 
-  // filter the tuts data on every update of query state
+
+  // Given a query, filter the tutorials and update the state
+  // --------------------------------------------------------
   useEffect(() => {
-    // console.log("query", query);
+    console.log("query", query);
 
     let filteredTuts = data;
+    console.log("filteredTuts", filteredTuts);
 
     if (query.text !== "") {
       filteredTuts = filteredTuts.filter((tut) => {
@@ -76,8 +88,25 @@ const Filters = ({ setTuts }) => {
       filteredTuts = just;
     }
 
+    if (query.level.length !== 0) {
+      console.log("query.level", query.level);
+      let just = [];
+      filteredTuts.forEach((tut) => {
+        query.level.forEach((qlevel) => {
+          console.log(qlevel, tut.level);
+          if (tut.level== undefined || tut.level.includes(qlevel)) {
+            return just.push(tut);
+          }
+        });
+      });
+      filteredTuts = just;
+    }
+
     setTuts(filteredTuts);
   }, [query]);
+
+  // Return HTML control elements
+  // ----------------------------
 
   return (
     <div className="filters">
@@ -112,6 +141,22 @@ const Filters = ({ setTuts }) => {
                   });
                   setQuery({ ...query, curiculum: curiculum });
                 }
+              }}
+            />
+          </div>
+
+          {/* level-input */}
+          <div className="level-input" title="Level">
+            <Select
+              className="select"
+              closeMenuOnSelect={false}
+              isMulti
+              options={levelFilter}
+              isClearable={true}
+              placeholder="Level..."
+              defaultValue={levelFilter.find((option) => option.isDefault)}
+              onChange={(e) => {
+                setQuery({ ...query, level: e.map((e) => e.value) });
               }}
             />
           </div>
