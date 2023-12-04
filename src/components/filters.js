@@ -50,10 +50,7 @@ const Filters = ({ setTuts }) => {
   // Given a query, filter the tutorials and update the state
   // --------------------------------------------------------
   useEffect(() => {
-    console.log("query", query);
-
     let filteredTuts = data;
-    console.log("filteredTuts", filteredTuts);
 
     if (query.text !== "") {
       filteredTuts = filteredTuts.filter((tut) => {
@@ -89,11 +86,9 @@ const Filters = ({ setTuts }) => {
     }
 
     if (query.level.length !== 0) {
-      console.log("query.level", query.level);
       let just = [];
       filteredTuts.forEach((tut) => {
         query.level.forEach((qlevel) => {
-          console.log(qlevel, tut.level);
           if (tut.level== undefined || tut.level.includes(qlevel)) {
             return just.push(tut);
           }
