@@ -22,6 +22,7 @@
   webpage: http://swcarpentry.github.io/python-novice-inflammation
   id: python
   level: [beginner]
+  language: [Python]
 - description: "A full introduction to C++ based on a series of slides and exercises."
   name: HEP C++ Course
   repository: https://github.com/hsf-training/cpluspluscourse
@@ -29,6 +30,7 @@
   videos: https://github.com/hsf-training/cpluspluscourse#-video-recordings--events
   webpage: https://github.com/hsf-training/cpluspluscourse#-getting-the-latest-pdf
   id: hepcpp
+  language: [C++]
 - description: "Building code is hard. <code>CMake</code> makes it easier."
   name: "Build systems:  <code>cmake</code>"
   repository: https://github.com/hsf-training/hsf-training-cmake-webpage
@@ -73,6 +75,7 @@
   videos: ""
   webpage: http://carpentries-incubator.github.io/python-testing/
   id: testingpython
+  language: [Python]
 - description: "Make science prettier with beautiful plots!"
   name: Matplotlib for HEP
   repository: https://github.com/hsf-training/hsf-training-matplotlib
@@ -158,6 +161,7 @@
   videos: ""
   webpage: ""
   id: alpaka
+  language: [C++]
 - description: Introduction to the <a href="https://en.wikipedia.org/wiki/Ssh_(Secure_Shell)">Secure Shell (SSH)</a>
   name: SSH
   repository: https://github.com/hsf-training/hsf-training-ssh-webpage/

@@ -6,7 +6,7 @@ import Seo from "../components/seo";
 // coponents
 import data from "../../data/data.yaml";
 import Layout from "../components/layout";
-import Tutcard from "../components/tutCard";
+import Tutcard from "../components/tutcard";
 
 
 // styles
