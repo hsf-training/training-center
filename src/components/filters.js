@@ -18,6 +18,7 @@ const Filters = ({ setTuts }) => {
   const [query, setQuery] = useState({
     text: "",
     status: [],
+    language: [],
     video: false,
     curiculum: {},
   });
@@ -36,6 +37,22 @@ const Filters = ({ setTuts }) => {
     { label: "Alpha", value: "alpha" },
   ]);
 
+  // language filter options
+  // We set the language fields to lowercase to avoid duplicates
+  data.forEach((tut) => {
+    if (tut.language) {
+      tut.language.forEach((lang) => lang.toLowerCase());
+    }
+  });
+  const allLanguages = data.reduce((acc, tut) => acc.concat(tut.language), []);
+  let uniqueLanguages = allLanguages
+    .filter((lang, index, array) => lang && array.findIndex((uLang) => uLang === lang) === index)
+    .map((lang) => ({
+      label: lang.charAt(0).toUpperCase() + lang.slice(1),
+      value: lang }));
+  // Add the "Other" option for tutorials without a listed language
+  uniqueLanguages.push({ label: "Other", value: "other" });
+  const [languageFilter, setLanguageFilter] = useState(uniqueLanguages);
 
   // filter the tuts data on every update of query state
   useEffect(() => {
@@ -56,6 +73,20 @@ const Filters = ({ setTuts }) => {
       filteredTuts = filteredTuts.filter((tut) => {
         return query.status.includes(tut.status);
       });
+    }
+
+    if (query.language.length !== 0) {
+      let just = [];
+      filteredTuts.forEach((tut) => {
+        query.language.forEach((qLang) => {
+          if (tut.language && tut.language.includes(qLang)) {
+            return just.push(tut);
+          } else if (qLang === "other" && !tut.language) {
+            return just.push(tut);
+          }
+        });
+      });
+      filteredTuts = just;
     }
 
     if (query.video !== false) {
@@ -128,6 +159,21 @@ const Filters = ({ setTuts }) => {
               defaultValue={statusFilter.find((option) => option.isDefault)}
               onChange={(e) => {
                 setQuery({ ...query, status: e.map((e) => e.value) });
+              }}
+            />
+          </div>
+
+          {/* language-input */}
+          <div className="language-input" title="Language">
+            <Select
+              className="select"
+              closeMenuOnSelect={false}
+              isMulti
+              options={languageFilter}
+              isClearable={true}
+              placeholder="Language..."
+              onChange={(e) => {
+                setQuery({ ...query, language: e.map((e) => e.value) });
               }}
             />
           </div>
