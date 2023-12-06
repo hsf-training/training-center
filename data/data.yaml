@@ -5,6 +5,7 @@
   videos: ""
   webpage: http://swcarpentry.github.io/git-novice
   id: git
+  level: [beginner]
 - description: "Learn to work with branches and more with this interactive webpage."
   name: Advanced git
   repository: https://github.com/pcottle/learnGitBranching
@@ -12,6 +13,7 @@
   videos: ""
   webpage: https://learngitbranching.js.org/?locale=en_US
   id: advancedgit
+  level: [advanced]
 - description: "Get started with an incredibly popular programming language."
   name: Programming with python
   repository: https://github.com/swcarpentry/python-novice-inflammation
@@ -19,6 +21,7 @@
   videos: ""
   webpage: http://swcarpentry.github.io/python-novice-inflammation
   id: python
+  level: [beginner]
   language: [Python]
 - description: "A full introduction to C++ based on a series of slides and exercises."
   name: HEP C++ Course
