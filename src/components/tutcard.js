@@ -1,5 +1,5 @@
 import React from "react";
-import ReactHtmlParser from "react-html-parser";
+import parse from "html-react-parser";
 import { StaticImage } from "gatsby-plugin-image";
 
 // styles
@@ -45,11 +45,11 @@ const Tutcard = ({ tut }) => {
       <div className="tutCardText">
         {/* title */}
         <a title={tut.name} href={tut.webpage}>
-          <h3>{ReactHtmlParser(tut.name)}</h3>
+          <h3>{parse(tut.name)}</h3>
         </a>
 
         {/* description */}
-        <p>{ReactHtmlParser(tut.description)}</p>
+        <p>{parse(tut.description)}</p>
       </div>
       <div
         className={`status ${
