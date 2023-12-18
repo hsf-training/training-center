@@ -2,6 +2,8 @@
 import * as React from "react";
 import { useState } from "react";
 import Seo from "../components/seo";
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import "react-tabs/style/react-tabs.css";
 
 // components
 import data from "../../data/data.yaml";
@@ -19,27 +21,38 @@ const IndexPage = () => {
 
   return (
     <Layout pageTitle="Home Page">
-      {/* filter */}
-      <Filter setTuts={setTuts} />
+      <Tabs>
+        <TabList>
+          <Tab>Curriculum</Tab>
+          <Tab>All Tutorials</Tab>
+        </TabList>
 
-      {/* list of tuts */}
-      <div className="tuts-container">
-        {tuts.length === 0 ? (
-          // if no tuts found
-          <div className="no-tuts">
-            <p>No Tutorials Found.</p>
-          </div>
-        ) : (
-          // if tuts found
-          tuts.map((tut, key) => {
-            return (
-              <div className="tutCard-container" key={key}>
-                <Tutcard tut={tut} />
+        <TabPanel>Coming soon.</TabPanel>
+
+        <TabPanel>
+          {/* filter */}
+          <Filter setTuts={setTuts} />
+
+          {/* list of tuts */}
+          <div className="tuts-container">
+            {tuts.length === 0 ? (
+              // if no tuts found
+              <div className="no-tuts">
+                <p>No Tutorials Found.</p>
               </div>
-            );
-          })
-        )}
-      </div>
+            ) : (
+              // if tuts found
+              tuts.map((tut, key) => {
+                return (
+                  <div className="tutCard-container" key={key}>
+                    <Tutcard tut={tut} />
+                  </div>
+                );
+              })
+            )}
+          </div>
+        </TabPanel>
+      </Tabs>
     </Layout>
   );
 };
