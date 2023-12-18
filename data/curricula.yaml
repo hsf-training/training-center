@@ -1,6 +1,6 @@
 - name: "Basic"
   description: "Basic skills for HEP software development."
-  tuts:
+  modules:
     - id: unix
     - id: git
     - id: python
@@ -10,7 +10,7 @@
     - id: root
 - name: "Software Development and Deployment"
   description: "Software development and deployment."
-  tuts:
+  modules:
     - id: git
     - id: advancedgit
     - id: cicd
@@ -21,22 +21,22 @@
     - id: levelupyourpython
 - name: "C++ corner"
   description: "C++ corner."
-  tuts:
+  modules:
     - id: hepcpp
     - id: cmake
 - name: "Data Analysis"
   description: "Machine learning and other analysis tools"
-  tuts:
+  modules:
     - id: ml
     - id: gpuml
 - name: "HEP specific tools"
   description: "Workflows and reproducibility"
-  tuts:
+  modules:
     - id: scikithep
     - id: root
 - name: "Analysis preservation"
   description: "Analysis preservation"
-  tuts:
+  modules:
     - id: git
     - id: cicd
     - id: cicdgithub
@@ -45,11 +45,11 @@
     - id: testingpython
 - name: "Miscellaneous"
   description: "Parallel programming"
-  tuts:
+  modules:
     - id: simpleanalysis
 - name: "Planned, in early development, or archived"
   description: "Planned, in early development, or archived"
-  tuts:
+  modules:
     - id: uproot
     - id: grid
     - id: parallel
