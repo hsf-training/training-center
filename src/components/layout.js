@@ -32,7 +32,7 @@ const Layout = ({ pageTitle, children }) => {
               src="../images/iris-hep.svg"
               height={200}
               style={{ position: "absolute", top: "-22px", left: "50px" }}
-              alt="iris hep logo" 
+              alt="iris hep logo"
             ></StaticImage>
           </a>
         </div>
@@ -44,7 +44,13 @@ const Layout = ({ pageTitle, children }) => {
               </Link>
             </li>
             <li className="navLinkItem">
-              <a href="https://hepsoftwarefoundation.org/" target="_blank" rel="noopener noreferrer" title="About" className="navLinkText">
+              <a
+                href="https://hepsoftwarefoundation.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="About"
+                className="navLinkText"
+              >
                 About
               </a>
             </li>
@@ -56,7 +62,8 @@ const Layout = ({ pageTitle, children }) => {
       <div className="hero">
         <h2>LEARN TO CODE</h2>
         <p>
-          Training and educational material for the high energy physics community.
+          Training and educational material for the high energy physics
+          community.
         </p>
       </div>
 

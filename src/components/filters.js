@@ -31,7 +31,7 @@ const Filters = ({ setTuts }) => {
   const [curiculaFilter, setCuriculaFilter] = useState(
     curicula.map((curiculum) => {
       return { label: curiculum.name, value: curiculum.name };
-    })
+    }),
   );
 
   // status filter options
@@ -43,8 +43,8 @@ const Filters = ({ setTuts }) => {
 
   // level filter options
   const [levelFilter, setLevelFilter] = useState([
-    { label: "Beginner", value: "beginner", isDefault: true},
-    { label: "Advanced", value: "advanced", isDefault: true},
+    { label: "Beginner", value: "beginner", isDefault: true },
+    { label: "Advanced", value: "advanced", isDefault: true },
   ]);
   // language filter options
   // We set the language fields to lowercase to avoid duplicates
@@ -55,14 +55,17 @@ const Filters = ({ setTuts }) => {
   });
   const allLanguages = data.reduce((acc, tut) => acc.concat(tut.language), []);
   let uniqueLanguages = allLanguages
-    .filter((lang, index, array) => lang && array.findIndex((uLang) => uLang === lang) === index)
+    .filter(
+      (lang, index, array) =>
+        lang && array.findIndex((uLang) => uLang === lang) === index,
+    )
     .map((lang) => ({
       label: lang.charAt(0).toUpperCase() + lang.slice(1),
-      value: lang }));
+      value: lang,
+    }));
   // Add the "Other" option for tutorials without a listed language
   uniqueLanguages.push({ label: "Other", value: "other" });
   const [languageFilter, setLanguageFilter] = useState(uniqueLanguages);
-
 
   // Given a query, filter the tutorials and update the state
   // --------------------------------------------------------
@@ -120,7 +123,7 @@ const Filters = ({ setTuts }) => {
       let just = [];
       filteredTuts.forEach((tut) => {
         query.level.forEach((qlevel) => {
-          if (tut.level== undefined || tut.level.includes(qlevel)) {
+          if (tut.level == undefined || tut.level.includes(qlevel)) {
             return just.push(tut);
           }
         });
