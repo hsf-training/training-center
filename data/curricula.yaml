@@ -1,59 +1,62 @@
-- name: "Basic"
-  description: "Basic skills for HEP software development."
-  modules:
-    - id: unix
-    - id: git
-    - id: python
-    - id: ssh
-    - id: ml
-    - id: matplotlib
-    - id: root
-- name: "Software Development and Deployment"
-  description: "Software development and deployment."
-  modules:
-    - id: git
-    - id: advancedgit
-    - id: cicd
-    - id: cicdgithub
-    - id: docker
-    - id: singularity
-    - id: testingpython
-    - id: levelupyourpython
-- name: "C++ corner"
-  description: "C++ corner."
-  modules:
-    - id: hepcpp
-    - id: cmake
-- name: "Data Analysis"
-  description: "Machine learning and other analysis tools"
-  modules:
-    - id: ml
-    - id: gpuml
-- name: "HEP specific tools"
-  description: "Workflows and reproducibility"
-  modules:
-    - id: scikithep
-    - id: root
-- name: "Analysis preservation"
-  description: "Analysis preservation"
-  modules:
-    - id: git
-    - id: cicd
-    - id: cicdgithub
-    - id: docker
-    - id: singularity
-    - id: testingpython
-- name: "Miscellaneous"
-  description: "Parallel programming"
-  modules:
-    - id: simpleanalysis
-- name: "Planned, in early development, or archived"
-  description: "Planned, in early development, or archived"
-  modules:
-    - id: uproot
-    - id: grid
-    - id: parallel
-    - id: alpaka
-    - id: yadagereana
-    - id: doc
-    - id: generators
+- id: "default"
+  title: "HSF Training Curriculum"
+  groups:
+    - name: "Basic"
+      description: "Basic skills for HEP software development."
+      modules:
+        - id: unix
+        - id: git
+        - id: python
+        - id: ssh
+        - id: ml
+        - id: matplotlib
+        - id: root
+    - name: "Software Development and Deployment"
+      description: "Software development and deployment."
+      modules:
+        - id: git
+        - id: advancedgit
+        - id: cicd
+        - id: cicdgithub
+        - id: docker
+        - id: singularity
+        - id: testingpython
+        - id: levelupyourpython
+    - name: "C++ corner"
+      description: "C++ corner."
+      modules:
+        - id: hepcpp
+        - id: cmake
+    - name: "Data Analysis"
+      description: "Machine learning and other analysis tools"
+      modules:
+        - id: ml
+        - id: gpuml
+    - name: "HEP specific tools"
+      description: "Workflows and reproducibility"
+      modules:
+        - id: scikithep
+        - id: root
+    - name: "Analysis preservation"
+      description: "Analysis preservation"
+      modules:
+        - id: git
+        - id: cicd
+        - id: cicdgithub
+        - id: docker
+        - id: singularity
+        - id: testingpython
+    - name: "Miscellaneous"
+      description: "Parallel programming"
+      modules:
+        - id: simpleanalysis
+    - name: "Planned, in early development, or archived"
+      description: "Planned, in early development, or archived"
+      modules:
+        - id: uproot
+        - id: grid
+        - id: parallel
+        - id: alpaka
+        - id: yadagereana
+        - id: doc
+        - id: generators
