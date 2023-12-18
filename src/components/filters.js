@@ -139,7 +139,6 @@ const Filters = ({ setTuts }) => {
 
   return (
     <div className="filters">
-      <h4>Filter</h4>
       <div className="container">
         {/* global-input */}
         <div className="text-input" title="Search Anything">

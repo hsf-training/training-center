@@ -19,9 +19,6 @@ const IndexPage = () => {
 
   return (
     <Layout pageTitle="Home Page">
-      {/* heading */}
-      <h2 id="title">TUTORIALS</h2>
-
       {/* filter */}
       <Filter setTuts={setTuts} />
 
