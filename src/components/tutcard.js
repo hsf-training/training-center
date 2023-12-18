@@ -56,15 +56,15 @@ const Tutcard = ({ tut }) => {
           tut.status === "stable"
             ? "stable"
             : tut.status === "beta"
-            ? "beta"
-            : "alpha"
+              ? "beta"
+              : "alpha"
         }`}
         title={
           tut.status === "stable"
             ? "stable"
             : tut.status === "beta"
-            ? "beta"
-            : "alpha"
+              ? "beta"
+              : "alpha"
         }
       ></div>
     </div>
