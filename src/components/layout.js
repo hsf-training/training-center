@@ -19,7 +19,7 @@ const Layout = ({ pageTitle, children }) => {
       {/* navbar */}
       <nav>
         <div className="container">
-          <a title="Remodel HSF Training Center" href="/">
+          <a title="HSF Training Center" href="/">
             <StaticImage
               className="img"
               src="../images/hsf.svg"
@@ -60,9 +60,9 @@ const Layout = ({ pageTitle, children }) => {
 
       {/* hero div */}
       <div className="hero">
-        <h2>LEARN TO CODE</h2>
+        <h2>HSF Training Center</h2>
         <p>
-          Training and educational material for the high energy physics
+          Training and educational material for the High Energy Physics
           community.
         </p>
       </div>
