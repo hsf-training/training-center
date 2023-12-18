@@ -7,6 +7,7 @@ import "react-tabs/style/react-tabs.css";
 
 // components
 import data from "../../data/data.yaml";
+import curricula_data from "../../data/curricula.yaml";
 import Layout from "../components/layout";
 import Tutcard from "../components/tutcard";
 
@@ -18,6 +19,9 @@ import Filter from "../components/filters";
 const IndexPage = () => {
   // tuts state
   const [tuts, setTuts] = useState(data);
+  const curriculaGroups = curricula_data.find((x) => x.id === "default")[
+    "groups"
+  ];
 
   return (
     <Layout pageTitle="Home Page">
@@ -27,7 +31,31 @@ const IndexPage = () => {
           <Tab>All Tutorials</Tab>
         </TabList>
 
-        <TabPanel>Coming soon.</TabPanel>
+        <TabPanel>
+          <div className="tuts-container">
+            {curriculaGroups.map((group, key) => {
+              return (
+                <div className="curriculumGroup-container" key={key}>
+                  <h3>{group.name}</h3>
+                  {group.description}
+                  <div className="tuts-container">
+                    {group.modules.map((module, key) => {
+                      var tut = tuts.find((x) => x.id == module.id);
+                      if (tut === undefined) {
+                        return "Undefined: " + module.id;
+                      }
+                      return (
+                        <div className="tutCard-container" key={key}>
+                          <Tutcard tut={tut} />
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </TabPanel>
 
         <TabPanel>
           {/* filter */}
