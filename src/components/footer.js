@@ -6,17 +6,7 @@ const Footer = () => {
   return (
     <footer>
       <div className="container">
-        <p>Copyright 2023 The Astropy Developers</p>
-      </div>
-      <div className="container">
-        <a href="/">
-          {" "}
-          <StaticImage
-            src="../images/logo.png"
-            height={30}
-            alt="logo"
-          ></StaticImage>
-        </a>
+        <p>Copyright 2023 HEP Software Foundation and IRIS-HEP</p>
       </div>
     </footer>
   );
