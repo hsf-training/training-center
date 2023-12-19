@@ -11,7 +11,6 @@ import "../styles/filters.css";
 
 // markup
 const Filters = ({ setTuts }) => {
-
   // search query state
   const [query, setQuery] = useState({
     text: "",
