@@ -36,7 +36,7 @@ const IndexPage = () => {
             {curriculaGroups.map((group, key) => {
               return (
                 <div className="curriculumGroup-container" key={key}>
-                  {key === 0 ? "" : <br/>}
+                  {key === 0 ? "" : <br />}
                   <h3>{group.name}</h3>
                   {group.description}
                   <div className="tuts-container">
