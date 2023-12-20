@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 
 // components
 import data from "../../data/data.yaml";
-import curicula_data from "../../data/curricula.yaml";
+import curricula from "../../data/curricula.yaml";
 import Select from "react-select";
 
 // styles
@@ -11,9 +11,6 @@ import "../styles/filters.css";
 
 // markup
 const Filters = ({ setTuts }) => {
-  // curicula state
-  const [curicula, setCuricula] = useState(curicula_data);
-
   // search query state
   const [query, setQuery] = useState({
     text: "",
@@ -27,25 +24,23 @@ const Filters = ({ setTuts }) => {
   // Define the options displayed in the filter UI elements
   // ------------------------------------------------------
 
-  // curicula filter options
-  const [curiculaFilter, setCuriculaFilter] = useState(
-    curicula.map((curiculum) => {
-      return { label: curiculum.name, value: curiculum.name };
-    }),
-  );
+  // curricula filter options
+  const curriculaFilter = curricula.map((curiculum) => {
+    return { label: curiculum.name, value: curiculum.name };
+  });
 
   // status filter options
-  const [statusFilter, setStatusFilter] = useState([
+  const statusFilter = [
     { label: "Stable", value: "stable", isDefault: true },
     { label: "Beta", value: "beta" },
     { label: "Alpha", value: "alpha" },
-  ]);
+  ];
 
   // level filter options
-  const [levelFilter, setLevelFilter] = useState([
+  const levelFilter = [
     { label: "Beginner", value: "beginner", isDefault: true },
     { label: "Advanced", value: "advanced", isDefault: true },
-  ]);
+  ];
   // language filter options
   // We set the language fields to lowercase to avoid duplicates
   data.forEach((tut) => {
@@ -65,7 +60,7 @@ const Filters = ({ setTuts }) => {
     }));
   // Add the "Other" option for tutorials without a listed language
   uniqueLanguages.push({ label: "Other", value: "other" });
-  const [languageFilter, setLanguageFilter] = useState(uniqueLanguages);
+  const languageFilter = uniqueLanguages;
 
   // Given a query, filter the tutorials and update the state
   // --------------------------------------------------------
@@ -123,7 +118,7 @@ const Filters = ({ setTuts }) => {
       let just = [];
       filteredTuts.forEach((tut) => {
         query.level.forEach((qlevel) => {
-          if (tut.level == undefined || tut.level.includes(qlevel)) {
+          if (tut.level === undefined || tut.level.includes(qlevel)) {
             return just.push(tut);
           }
         });
@@ -132,7 +127,7 @@ const Filters = ({ setTuts }) => {
     }
 
     setTuts(filteredTuts);
-  }, [query]);
+  }, [query, setTuts]);
 
   // Return HTML control elements
   // ----------------------------
@@ -153,18 +148,18 @@ const Filters = ({ setTuts }) => {
       </div>
       <div className="container">
         <div className="container">
-          {/* curicula-input */}
-          <div className="curicula-input" title="Curicula">
+          {/* curricula-input */}
+          <div className="curricula-input" title="Curricula">
             <Select
               className="select"
-              options={curiculaFilter}
+              options={curriculaFilter}
               isClearable={true}
-              placeholder="Curicula..."
+              placeholder="Curricula..."
               onChange={(e) => {
                 if (e === null) {
                   setQuery({ ...query, curiculum: {} });
                 } else {
-                  const curiculum = curicula.find((cur) => {
+                  const curiculum = curricula.find((cur) => {
                     return cur.name === e.value;
                   });
                   setQuery({ ...query, curiculum: curiculum });

@@ -23,15 +23,15 @@ const Layout = ({ pageTitle, children }) => {
             <StaticImage
               className="img"
               src="../images/hsf.svg"
-              height={30}
-              style={{ position: "absolute", top: "10px", left: "30px" }}
+              height={40}
+              style={{ position: "absolute", top: "5px", left: "30px" }}
               alt="hsf logo"
             ></StaticImage>
             <StaticImage
               className="img"
               src="../images/iris-hep.svg"
-              height={200}
-              style={{ position: "absolute", top: "-22px", left: "50px" }}
+              height={50}
+              style={{ position: "absolute", top: "-1px", left: "80px" }}
               alt="iris hep logo"
             ></StaticImage>
           </a>
