@@ -10,7 +10,7 @@ import logging
 
 if __name__ == "__main__":
     if len(sys.argv) == 2:
-        data_path = Path(sys.argv[1])
+        data_file = Path(sys.argv[1])
     else:
         this_dir = Path(__file__).resolve().parent
         assert this_dir.is_dir()
