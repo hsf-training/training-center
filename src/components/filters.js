@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 
 // components
 import data from "../../data/data.yaml";
-import curricula from "../../data/curricula.yaml";
 import Select from "react-select";
 
 // styles
@@ -23,11 +22,6 @@ const Filters = ({ setTuts }) => {
 
   // Define the options displayed in the filter UI elements
   // ------------------------------------------------------
-
-  // curricula filter options
-  const curriculaFilter = curricula.map((curiculum) => {
-    return { label: curiculum.name, value: curiculum.name };
-  });
 
   // status filter options
   const statusFilter = [
@@ -148,26 +142,6 @@ const Filters = ({ setTuts }) => {
       </div>
       <div className="container">
         <div className="container">
-          {/* curricula-input */}
-          <div className="curricula-input" title="Curricula">
-            <Select
-              className="select"
-              options={curriculaFilter}
-              isClearable={true}
-              placeholder="Curricula..."
-              onChange={(e) => {
-                if (e === null) {
-                  setQuery({ ...query, curiculum: {} });
-                } else {
-                  const curiculum = curricula.find((cur) => {
-                    return cur.name === e.value;
-                  });
-                  setQuery({ ...query, curiculum: curiculum });
-                }
-              }}
-            />
-          </div>
-
           {/* level-input */}
           <div className="level-input" title="Level">
             <Select
