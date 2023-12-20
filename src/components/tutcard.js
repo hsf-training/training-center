@@ -1,6 +1,5 @@
 import React from "react";
 import parse from "html-react-parser";
-import { StaticImage } from "gatsby-plugin-image";
 
 // styles
 import "../styles/tutCard.css";
@@ -8,6 +7,8 @@ import "../styles/tutCard.css";
 // components
 import { AiFillGithub } from "react-icons/ai";
 import { MdVideoLibrary } from "react-icons/md";
+
+const images = require.context("../images");
 
 // markup
 const Tutcard = ({ tut }) => {
@@ -34,12 +35,12 @@ const Tutcard = ({ tut }) => {
 
         {/* hero-image */}
         <div className="tutCardImg">
-          <StaticImage
+          <img
             className="hero-image"
-            src="../images/clifford.jpg"
+            src={images("./" + (tut.image ? tut.image : "hsf.svg")).default}
             height={300}
             alt={tut.name}
-          ></StaticImage>
+          ></img>
         </div>
 
         {/* texts */}
