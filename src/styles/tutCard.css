@@ -34,7 +34,7 @@ code {
 .tutCard .tutCardImg .hero-image {
   height: 100%;
   width: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 .tutCard .tutCardText {
   max-width: 60%;
