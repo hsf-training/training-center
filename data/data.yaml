@@ -66,9 +66,7 @@
   videos: https://www.youtube.com/watch?v=gplMywJAFDI&list=PLKZ9c4ONm-Vk0wnDKaaovoEkOk3PVdL0V
   webpage: https://hsf-training.github.io/hsf-training-cms-analysis-webpage/
   id: simpleanalysis
-- description:
-    <a href="https://en.wikipedia.org/wiki/Unit_testing">Unit testing</a>
-    in python.
+- description: <a href="https://en.wikipedia.org/wiki/Unit_testing">Unit testing</a> in python.
   name: Unit testing
   repository: https://github.com/carpentries-incubator/python-testing
   status: beta
@@ -90,9 +88,7 @@
   videos: ""
   webpage: ""
   id: parallel
-- description:
-    Introduction to the <a href="https://www.docker.com/">docker</a> container
-    image system.
+- description: Introduction to the <a href="https://www.docker.com/">docker</a> container image system.
   name: Docker
   repository: https://github.com/hsf-training/hsf-training-docker
   status: stable
@@ -120,18 +116,14 @@
   videos: https://www.youtube.com/playlist?list=PLKZ9c4ONm-VnfKk7XrVUa-V42lUdMrB6M
   webpage: https://hsf-training.github.io/hsf-training-ml-gpu-webpage
   id: gpuml
-- description:
-    <a href="https://docs.gitlab.com/ee/ci/">Continuous integration and
-    deployment</a> with <a href="https://about.gitlab.com/">gitlab</a>.
+- description: <a href="https://docs.gitlab.com/ee/ci/">Continuous integration and deployment</a> with <a href="https://about.gitlab.com/">gitlab</a>.
   name: CI/CD (gitlab)
   repository: https://github.com/hsf-training/hsf-training-cicd
   status: stable
   videos: https://www.youtube.com/watch?v=C9auGFgIHns&list=PLKZ9c4ONm-VmmTObyNWpz4hB3Hgx8ZWSb
   webpage: https://hsf-training.github.io/hsf-training-cicd/
   id: cicd
-- description:
-    <a href="https://docs.gitlab.com/ee/ci/">Continuous integration and
-    deployment</a> with <a href="https://github.com/features/actions">github actions</a>.
+- description: <a href="https://docs.gitlab.com/ee/ci/">Continuous integration and deployment</a> with <a href="https://github.com/features/actions">github actions</a>.
   name: CI/CD (github)
   repository: https://github.com/hsf-training/hsf-training-cicd-github
   status: stable
@@ -152,9 +144,7 @@
   videos: ""
   webpage: ""
   id: generators
-- description:
-    <a href="https://alpaka.readthedocs.io/en/latest/index.html">alpaka</a>
-    is a header-only C++ abstraction library for accelerator development.
+- description: <a href="https://alpaka.readthedocs.io/en/latest/index.html">alpaka</a> is a header-only C++ abstraction library for accelerator development.
   name: alpaka
   repository: https://github.com/hsf-training/hsf-training-alpaka-webpage
   status: alpha
