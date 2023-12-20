@@ -12,7 +12,7 @@
         - id: matplotlib
         - id: root
     - name: "Software Development and Deployment"
-      description: "Software development and deployment."
+      description: "Ensure that your code is easy to use and maintain."
       modules:
         - id: git
         - id: advancedgit
@@ -22,8 +22,9 @@
         - id: singularity
         - id: testingpython
         - id: levelupyourpython
+        - id: se-for-sci
     - name: "C++ corner"
-      description: "C++ corner."
+      description: "Learn C++ for blazingly fast code!"
       modules:
         - id: hepcpp
         - id: cmake
@@ -37,26 +38,23 @@
       modules:
         - id: scikithep
         - id: root
+        - id: unroot
+        - id: reana
+        - id: root-analysis
     - name: "Analysis preservation"
-      description: "Analysis preservation"
+      description: "Learn how to ensure that your analysis survives the test of time."
       modules:
         - id: git
         - id: cicd
         - id: cicdgithub
         - id: docker
         - id: singularity
+        - id: reana
         - id: testingpython
-    - name: "Miscellaneous"
-      description: "Parallel programming"
+    - name: "Complete courses"
+      description: "These modules cover a variety of topics"
       modules:
-        - id: simpleanalysis
-    - name: "Planned, in early development, or archived"
-      description: "Planned, in early development, or archived"
-      modules:
-        - id: uproot
-        - id: grid
-        - id: parallel
-        - id: alpaka
-        - id: yadagereana
-        - id: doc
-        - id: generators
+        - id: se-for-sci
+        - id: levelupyourpython
+        - id: particle-physics-methods
+        - id: lhcb-analysis-essentials
