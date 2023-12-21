@@ -67,22 +67,24 @@ const Tutcard = ({ tut }) => {
         {/* description */}
         <p>{parse(tut.description)}</p>
       </div>
-      <div
-        className={`status ${
-          tut.status === "stable"
-            ? "stable"
-            : tut.status === "beta"
+      { tut.status === "stable" ? "" :
+        <div
+          className={`status ${
+            tut.status === "beta"
               ? "beta"
               : "alpha"
-        }`}
-        title={
-          tut.status === "stable"
-            ? "stable"
-            : tut.status === "beta"
+          }`}
+          title={
+            tut.status === "beta"
               ? "beta"
               : "alpha"
-        }
-      ></div>
+          }
+        >{
+          tut.status === "beta"
+              ? "Beta testing"
+              : "Early development"
+        }</div>
+      }
     </div>
   );
 };
