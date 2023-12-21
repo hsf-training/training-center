@@ -14,20 +14,20 @@ const images = require.context("../images");
 const Tutcard = ({ tut }) => {
   const handleCardClick = () => {
     window.location.href = tut.webpage;
-  }
+  };
   const handleCardKeyPress = (e) => {
-    if (e.key === 'Enter') {
+    if (e.key === "Enter") {
       handleCardClick();
     }
-  }
+  };
   return (
-    <div 
+    <div
       className="tutCard"
       onClick={handleCardClick}
       role="button"
       tabIndex={0}
       onKeyDown={handleCardKeyPress}
-      style={{ cursor: 'pointer' }}
+      style={{ cursor: "pointer" }}
     >
       {/* GitHub and Videos links */}
       <div className="additionals">
