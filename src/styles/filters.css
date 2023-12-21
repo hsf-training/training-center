@@ -40,9 +40,9 @@
   border: 2px solid #2684ff;
 }
 
-.curicula-input,
 .status-input,
-.language-input {
+.language-input,
+.level-input {
   max-width: 25rem;
   font-size: 0.8rem;
   margin: 0.2rem;
@@ -51,9 +51,9 @@
   align-items: center;
 }
 
-.curicula-input label,
 .status-input label,
-.langualge-input label {
+.langualge-input label,
+.level-input label {
   font-size: 0.8rem;
   font-weight: 400;
   color: #4b5563;
@@ -117,7 +117,7 @@
   }
   .status-input,
   .language-input,
-  .curicula-input {
+  .level-input {
     max-width: 100%;
     width: 100%;
   }
