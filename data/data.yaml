@@ -5,6 +5,7 @@
   status: stable
   videos: ""
   webpage: https://github.com/root-project/software-carpentry
+  image: root-logo.png
 - description: Open <code>ROOT</code> files in <a href="https://julialang.org/">Julia</a>!
   id: unroot
   name: <code>UnROOT</code>
@@ -12,6 +13,7 @@
   status: beta
   videos: ""
   webpage: https://moelf.github.io/HSF_Julia_Tutorial/dev/notebooks/unroot_tutorial/
+  image: unroot-logo.svg
 - description: Reading and writing ROOT files without having to install ROOT.
   id: uproot
   name: <code>uproot</code>
@@ -19,6 +21,7 @@
   status: beta
   videos: ""
   webpage: https://hsf-training.github.io/hsf-training-uproot-webpage/
+  image: uproot-logo.svg
 - description: A simple analysis using CMS open data.
   id: simpleanalysis
   name: A simple analysis
@@ -26,6 +29,7 @@
   status: stable
   videos: https://www.youtube.com/watch?v=gplMywJAFDI&list=PLKZ9c4ONm-Vk0wnDKaaovoEkOk3PVdL0V
   webpage: https://hsf-training.github.io/hsf-training-cms-analysis-webpage/
+  image: cms-plot.png
 - description: Learn to work with branches and more with this interactive webpage.
   id: advancedgit
   level:
@@ -35,6 +39,7 @@
   status: stable
   videos: ""
   webpage: https://learngitbranching.js.org/?locale=en_US
+  image: git-logo.svg
 - description: Building code is hard. <code>CMake</code> makes it easier.
   id: cmake
   name: "Build systems:  <code>cmake</code>"
@@ -42,6 +47,7 @@
   status: stable
   videos: ""
   webpage: https://hsf-training.github.io/hsf-training-cmake-webpage/
+  image: cmake-logo.svg
 - description: <a href="https://docs.gitlab.com/ee/ci/">Continuous integration and deployment</a> with <a href="https://github.com/features/actions">github actions</a>.
   id: cicdgithub
   name: CI/CD (github)
@@ -49,6 +55,7 @@
   status: stable
   videos: https://www.youtube.com/watch?v=-Xd5D6xKugk&list=PLKZ9c4ONm-Vl3kwsjrNRlPYNQFbPO2no4
   webpage: https://hsf-training.github.io/hsf-training-cicd-github/
+  image: github-logo.svg
 - description: <a href="https://docs.gitlab.com/ee/ci/">Continuous integration and deployment</a> with <a href="https://about.gitlab.com/">gitlab</a>.
   id: cicd
   name: CI/CD (gitlab)
@@ -56,13 +63,7 @@
   status: stable
   videos: https://www.youtube.com/watch?v=C9auGFgIHns&list=PLKZ9c4ONm-VmmTObyNWpz4hB3Hgx8ZWSb
   webpage: https://hsf-training.github.io/hsf-training-cicd/
-- description: ""
-  id: grid
-  name: Distributed file systems and grid computing
-  repository: ""
-  status: alpha
-  videos: ""
-  webpage: ""
+  image: gitlab-logo.svg
 - description: Introduction to the <a href="https://www.docker.com/">docker</a> container image system.
   id: docker
   name: Docker
@@ -70,20 +71,7 @@
   status: stable
   videos: https://www.youtube.com/watch?v=Qr42pEtio-Q&list=PLKZ9c4ONm-VnqD5oN2_8tXO0Yb1H_s0sj
   webpage: https://hsf-training.github.io/hsf-training-docker/index.html
-- description: <code>sphinx</code>, <code>doxygen</code>, etc.
-  id: doc
-  name: Documentation
-  repository: ""
-  status: alpha
-  videos: ""
-  webpage: ""
-- description: <code>pythia</code>, <code>sherpa</code>, <code>madgraph</code>, etc.
-  id: generators
-  name: Event generation and MC
-  repository: ""
-  status: alpha
-  videos: ""
-  webpage: ""
+  image: docker-logo.svg
 - description: A full introduction to C++ based on a series of slides and exercises.
   id: hepcpp
   language:
@@ -93,6 +81,7 @@
   status: stable
   videos: https://github.com/hsf-training/cpluspluscourse#-video-recordings--events
   webpage: https://github.com/hsf-training/cpluspluscourse#-getting-the-latest-pdf
+  image: cpp-logo.svg
 - description: An introduction to Julia for HEP, especially for those familiar with Python (or C++)
   id: julia
   name: Julia
@@ -100,6 +89,7 @@
   status: stable
   videos: ""
   webpage: https://juliahep.github.io/JuliaHEP-2023/intro.html
+  image: julia-logo.svg
 - description: From python, shell, and git to reproducible analyses with Snakemake. Written for LHCb, but applicable to everyone.
   id: lhcb-analysis-essentials
   name: LHCb Analysis Essentials
@@ -107,6 +97,7 @@
   status: stable
   videos: ""
   webpage: https://hsf-training.github.io/analysis-essentials/
+  image: lhcb-logo.svg
 - description: Advanced bits of python (testing, debugging, logging, and more)
   id: levelupyourpython
   name: Level up your python
@@ -114,6 +105,7 @@
   status: stable
   videos: ""
   webpage: https://henryiii.github.io/level-up-your-python/notebooks/0%20Intro.html
+  image: levelupyourpython-logo.svg
 - description: Get behind the buzzword and teach machines to work for you intelligently!
   id: ml
   name: Machine learning
@@ -121,6 +113,7 @@
   status: stable
   videos: https://www.youtube.com/playlist?list=PLKZ9c4ONm-VmHsMKImIDEMsZI1Vp0UY-Z
   webpage: https://hsf-training.github.io/hsf-training-ml-webpage
+  image: ml-icon.svg
 - description: Speed up your machine learning using massive parallelization!
   id: gpuml
   name: Machine learning on GPU
@@ -128,6 +121,7 @@
   status: stable
   videos: https://www.youtube.com/playlist?list=PLKZ9c4ONm-VnfKk7XrVUa-V42lUdMrB6M
   webpage: https://hsf-training.github.io/hsf-training-ml-gpu-webpage
+  image: pytorch-logo.svg
 - description: Make science prettier with beautiful plots!
   id: matplotlib
   name: Matplotlib for HEP
@@ -135,6 +129,7 @@
   status: beta
   videos: ""
   webpage: https://hsf-training.github.io/hsf-training-matplotlib/
+  image: matplotlib-logo.svg
 - description: Learn about ROOT, RooFit, machine learning with TMVA, and physics simulations.
   id: root-analysis
   name: Particle physics methods
@@ -142,6 +137,7 @@
   status: beta
   videos: ""
   webpage: https://gitlab.com/stroche/particle-physics-methods
+  image: root-logo.png
 - description: Get started with an incredibly popular programming language.
   id: python
   language:
@@ -153,6 +149,7 @@
   status: stable
   videos: ""
   webpage: http://swcarpentry.github.io/python-novice-inflammation
+  image: python-logo.svg
 - description: Run containerised data analysis pipelines on remote compute clouds.
   id: reana
   name: Reproducible analyses with REANA
@@ -160,6 +157,7 @@
   status: stable
   videos: ""
   webpage: https://hsf-training.github.io/hsf-training-reana-webpage/
+  image: reana-logo.png
 - description: Introduction to the <a href="https://en.wikipedia.org/wiki/Ssh_(Secure_Shell)">Secure Shell (SSH)</a>
   id: ssh
   name: SSH
@@ -167,6 +165,7 @@
   status: alpha
   videos: ""
   webpage: https://hsf-training.github.io/hsf-training-ssh-webpage/
+  image: ssh-icon.svg
 - description: A collection of packages for particle physics analyses in Python.
   id: scikithep
   name: Scikit-HEP
@@ -174,6 +173,7 @@
   status: stable
   videos: ""
   webpage: https://hsf-training.github.io/hsf-training-scikit-hep-webpage/
+  image: scikithep-logo.svg
 - description: Introduction to containerization with <a href="https://apptainer.org/">Singularity/Apptainer</a>.
   id: singularity
   name: Singularity
@@ -181,6 +181,7 @@
   status: stable
   videos: https://www.youtube.com/watch?v=g0cCErlveiI&list=PLKZ9c4ONm-VkxWW98Gcn9H6WwykMiqtnF
   webpage: https://hsf-training.github.io/hsf-training-singularity-webpage/
+  image: singularity-logo.svg
 - description: This course covers various best practices like testing, pytest, object oriented programming, packing, CI, and more.
   id: se-for-sci
   name: Software Engineering for Scientific Computing
@@ -188,6 +189,7 @@
   status: stable
   videos: ""
   webpage: https://henryiii.github.io/se-for-sci/
+  image: softwareeng-icon.svg
 - description: A guide through the basics of the file systems and the shell.
   id: unix
   name: The UNIX Shell
@@ -195,6 +197,7 @@
   status: stable
   videos: ""
   webpage: https://swcarpentry.github.io/shell-novice/
+  image: unix-shell.png
 - description: <a href="https://en.wikipedia.org/wiki/Unit_testing">Unit testing</a> in python.
   id: testingpython
   language:
@@ -204,6 +207,7 @@
   status: beta
   videos: ""
   webpage: http://carpentries-incubator.github.io/python-testing/
+  image: pytest-logo.svg
 - description: Track code changes, undo mistakes, collaborate. This module is a must.
   id: git
   level:
