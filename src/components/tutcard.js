@@ -20,6 +20,18 @@ const Tutcard = ({ tut }) => {
       handleCardClick();
     }
   };
+
+  const statusDescriptionMapping = {
+    stable: "",
+    beta: "Beta testing",
+    alpha: "Early development",
+  };
+  const statusClassMapping = {
+    stable: "",
+    beta: "status beta",
+    alpha: "status alpha",
+  };
+
   return (
     <div
       className="tutCard"
@@ -67,22 +79,9 @@ const Tutcard = ({ tut }) => {
         {/* description */}
         <p>{parse(tut.description)}</p>
       </div>
-      <div
-        className={`status ${
-          tut.status === "stable"
-            ? "stable"
-            : tut.status === "beta"
-              ? "beta"
-              : "alpha"
-        }`}
-        title={
-          tut.status === "stable"
-            ? "stable"
-            : tut.status === "beta"
-              ? "beta"
-              : "alpha"
-        }
-      ></div>
+      <div className={statusClassMapping[tut.status]} title={tut.status}>
+        {statusDescriptionMapping[tut.status]}
+      </div>
     </div>
   );
 };
