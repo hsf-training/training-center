@@ -28,11 +28,6 @@
       modules:
         - id: hepcpp
         - id: cmake
-    - name: "Data Analysis"
-      description: "Machine learning and other analysis tools"
-      modules:
-        - id: ml
-        - id: gpuml
     - name: "HEP specific tools"
       description: "Workflows and reproducibility"
       modules:
@@ -41,6 +36,11 @@
         - id: unroot
         - id: reana
         - id: root-analysis
+    - name: "Data Analysis"
+      description: "Machine learning and other analysis tools"
+      modules:
+        - id: ml
+        - id: gpuml
     - name: "Analysis preservation"
       description: "Learn how to ensure that your analysis survives the test of time."
       modules:
@@ -56,5 +56,5 @@
       modules:
         - id: se-for-sci
         - id: levelupyourpython
-        - id: particle-physics-methods
+        - id: root-analysis
         - id: lhcb-analysis-essentials
