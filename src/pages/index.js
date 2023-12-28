@@ -41,7 +41,10 @@ const IndexPage = () => {
                   {group.description}
                   <div className="tuts-container">
                     {group.modules.map((module, key) => {
-                      var tut = tuts.find((x) => x.id === module.id);
+                      {
+                        /* don't use tuts here, the filters might have modified it */
+                      }
+                      var tut = data.find((x) => x.id === module.id);
                       if (tut === undefined) {
                         return "Undefined: " + module.id;
                       }
