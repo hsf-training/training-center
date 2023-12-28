@@ -9,6 +9,8 @@
   language:
     - Python
 - description: Open <code>ROOT</code> files in Julia!
+  level:
+    - beginner
   id: unroot
   name: <code>UnROOT</code>
   repository: https://github.com/Moelf/HSF_Julia_Tutorial
@@ -18,6 +20,8 @@
   image: unroot-logo.svg
   language:
     - Julia
+  level:
+    - beginner
 - description: Reading and writing ROOT files without having to install ROOT.
   id: uproot
   name: <code>uproot</code>
@@ -28,6 +32,8 @@
   image: uproot-logo.svg
   language:
     - Python
+  level:
+    - beginner
 - description: A simple analysis using CMS open data.
   id: simpleanalysis
   name: A simple analysis
@@ -38,6 +44,8 @@
   image: cms-plot.png
   language:
     - C++
+  level:
+    - beginner
 - description: Learn to work with branches and more with this interactive webpage.
   id: advancedgit
   level:
@@ -61,6 +69,8 @@
   language:
     - C++
 - description: "Continuous integration and deployment with GitHub actions: automatically run unit tests and more for every commit that you push on GitHub."
+  level:
+    - advanced
   id: cicdgithub
   name: CI/CD (github)
   repository: https://github.com/hsf-training/hsf-training-cicd-github
@@ -71,6 +81,8 @@
   language:
     - other
 - description: "Continuous integration and deployment with gitlab: automatically run unit tests and more for every commit that you push on gitlab."
+  level:
+    - advanced
   id: cicd
   name: CI/CD (gitlab)
   repository: https://github.com/hsf-training/hsf-training-cicd
@@ -81,6 +93,8 @@
   language:
     - other
 - description: "Introduction to the docker container image system. Docker allows to consistently run your code in any environment or on any machine, making it an important ingredient to analysis preservation."
+  level:
+    - advanced
   id: docker
   name: Docker
   repository: https://github.com/hsf-training/hsf-training-docker
@@ -90,6 +104,8 @@
   image: docker-logo.svg
   language:
     - other
+  level:
+    - advanced
 - description: A full introduction to C++ based on a series of slides and exercises.
   id: hepcpp
   language:
@@ -100,6 +116,9 @@
   videos: https://github.com/hsf-training/cpluspluscourse#-video-recordings--events
   webpage: https://github.com/hsf-training/cpluspluscourse#-getting-the-latest-pdf
   image: cpp-logo.svg
+  level:
+    - beginner
+    - advanced
 - description: An introduction to Julia for HEP, especially for those familiar with Python (or C++)
   id: julia
   name: Julia
@@ -110,6 +129,8 @@
   image: julia-logo.svg
   language:
     - Julia
+  level:
+    - beginner
 - description: From python, shell, and git to reproducible analyses with Snakemake. Written for LHCb, but applicable to everyone.
   id: lhcb-analysis-essentials
   name: LHCb Analysis Essentials
@@ -120,6 +141,8 @@
   image: lhcb-logo.svg
   language:
     - Python
+  level:
+    - beginner
 - description: Advanced bits of python (testing, debugging, logging, and more)
   id: levelupyourpython
   name: Level up your python
@@ -130,6 +153,8 @@
   image: levelupyourpython-logo.svg
   language:
     - Python
+  level:
+    - advanced
 - description: Get behind the buzzword and teach machines to work for you intelligently!
   id: ml
   name: Machine learning
@@ -140,6 +165,8 @@
   image: ml-icon.svg
   language:
     - Python
+  level:
+    - beginner
 - description: Speed up your machine learning using massive parallelization!
   id: gpuml
   name: Machine learning on GPU
@@ -150,6 +177,8 @@
   image: pytorch-logo.svg
   language:
     - Python
+  level:
+    - beginner
 - description: Make science prettier with beautiful plots!
   id: matplotlib
   name: Matplotlib for HEP
@@ -160,6 +189,8 @@
   image: matplotlib-logo.svg
   language:
     - Python
+  level:
+    - beginner
 - description: Learn about ROOT, RooFit, machine learning with TMVA, and physics simulations.
   id: root-analysis
   name: Particle physics methods
@@ -170,6 +201,8 @@
   image: root-logo.png
   language:
     - Python
+  level:
+    - beginner
 - description: Get started with an incredibly popular programming language.
   id: python
   language:
@@ -193,6 +226,8 @@
   language:
     - other
 - description: Introduction to the Secure Shell (SSH), your number one tool for remote computing
+  level:
+    - advanced
   id: ssh
   name: SSH
   repository: https://github.com/hsf-training/hsf-training-ssh-webpage/
@@ -202,6 +237,8 @@
   image: ssh-icon.svg
   language:
     - other
+  level:
+    - beginner
 - description: A collection of packages for particle physics analyses in Python.
   id: scikithep
   name: Scikit-HEP
@@ -213,6 +250,8 @@
   language:
     - Python
 - description: Introduction to containerization with Singularity/Apptainer. Singularity is a containerization tool (similar to Docker) that is particularly useful for HPC environments.
+  level:
+    - beginner
   id: singularity
   name: Singularity
   repository: https://github.com/hsf-training/hsf-training-singularity-webpage
@@ -222,6 +261,8 @@
   image: singularity-logo.svg
   language:
     - other
+  level:
+    - advanced
 - description: This course covers various best practices like testing, pytest, object oriented programming, packing, CI, and more.
   id: se-for-sci
   name: Software Engineering for Scientific Computing
@@ -233,6 +274,8 @@
   language:
     - Python
     - C++
+  level:
+    - advanced
 - description: A guide through the basics of the file systems and the shell.
   id: unix
   name: The UNIX Shell
@@ -244,6 +287,8 @@
   language:
     - other
 - description: Unit testing in python.
+  level:
+    - beginner
   id: testingpython
   language:
     - Python
@@ -253,6 +298,8 @@
   videos: ""
   webpage: http://carpentries-incubator.github.io/python-testing/
   image: pytest-logo.svg
+  level:
+    - beginner
 - description: Track code changes, undo mistakes, collaborate. This module is a must.
   id: git
   level:
