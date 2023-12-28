@@ -20,8 +20,6 @@
   image: unroot-logo.svg
   language:
     - Julia
-  level:
-    - beginner
 - description: Reading and writing ROOT files without having to install ROOT.
   id: uproot
   name: <code>uproot</code>
@@ -104,8 +102,6 @@
   image: docker-logo.svg
   language:
     - other
-  level:
-    - advanced
 - description: A full introduction to C++ based on a series of slides and exercises.
   id: hepcpp
   language:
@@ -226,8 +222,6 @@
   language:
     - other
 - description: Introduction to the Secure Shell (SSH), your number one tool for remote computing
-  level:
-    - advanced
   id: ssh
   name: SSH
   repository: https://github.com/hsf-training/hsf-training-ssh-webpage/
@@ -251,7 +245,7 @@
     - Python
 - description: Introduction to containerization with Singularity/Apptainer. Singularity is a containerization tool (similar to Docker) that is particularly useful for HPC environments.
   level:
-    - beginner
+    - advanced
   id: singularity
   name: Singularity
   repository: https://github.com/hsf-training/hsf-training-singularity-webpage
@@ -261,8 +255,6 @@
   image: singularity-logo.svg
   language:
     - other
-  level:
-    - advanced
 - description: This course covers various best practices like testing, pytest, object oriented programming, packing, CI, and more.
   id: se-for-sci
   name: Software Engineering for Scientific Computing
@@ -298,8 +290,6 @@
   videos: ""
   webpage: http://carpentries-incubator.github.io/python-testing/
   image: pytest-logo.svg
-  level:
-    - beginner
 - description: Track code changes, undo mistakes, collaborate. This module is a must.
   id: git
   level:
