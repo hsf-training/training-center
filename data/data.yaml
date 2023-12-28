@@ -8,9 +8,9 @@
   image: root-logo.png
   language:
     - Python
+- description: Open <code>ROOT</code> files in Julia!
   level:
     - beginner
-- description: Open <code>ROOT</code> files in <a href="https://julialang.org/">Julia</a>!
   id: unroot
   name: <code>UnROOT</code>
   repository: https://github.com/Moelf/HSF_Julia_Tutorial
@@ -20,8 +20,6 @@
   image: unroot-logo.svg
   language:
     - Julia
-  level:
-    - beginner
 - description: Reading and writing ROOT files without having to install ROOT.
   id: uproot
   name: <code>uproot</code>
@@ -68,9 +66,9 @@
   image: cmake-logo.svg
   language:
     - C++
+- description: "Continuous integration and deployment with GitHub actions: automatically run unit tests and more for every commit that you push on GitHub."
   level:
     - advanced
-- description: <a href="https://docs.gitlab.com/ee/ci/">Continuous integration and deployment</a> with <a href="https://github.com/features/actions">github actions</a>.
   id: cicdgithub
   name: CI/CD (github)
   repository: https://github.com/hsf-training/hsf-training-cicd-github
@@ -80,9 +78,9 @@
   image: github-logo.svg
   language:
     - other
+- description: "Continuous integration and deployment with gitlab: automatically run unit tests and more for every commit that you push on gitlab."
   level:
     - advanced
-- description: <a href="https://docs.gitlab.com/ee/ci/">Continuous integration and deployment</a> with <a href="https://about.gitlab.com/">gitlab</a>.
   id: cicd
   name: CI/CD (gitlab)
   repository: https://github.com/hsf-training/hsf-training-cicd
@@ -92,9 +90,9 @@
   image: gitlab-logo.svg
   language:
     - other
+- description: "Introduction to the docker container image system. Docker allows to consistently run your code in any environment or on any machine, making it an important ingredient to analysis preservation."
   level:
     - advanced
-- description: Introduction to the <a href="https://www.docker.com/">docker</a> container image system.
   id: docker
   name: Docker
   repository: https://github.com/hsf-training/hsf-training-docker
@@ -104,8 +102,6 @@
   image: docker-logo.svg
   language:
     - other
-  level:
-    - advanced
 - description: A full introduction to C++ based on a series of slides and exercises.
   id: hepcpp
   language:
@@ -225,9 +221,7 @@
   image: reana-logo.png
   language:
     - other
-  level:
-    - advanced
-- description: Introduction to the <a href="https://en.wikipedia.org/wiki/Ssh_(Secure_Shell)">Secure Shell (SSH)</a>
+- description: Introduction to the Secure Shell (SSH), your number one tool for remote computing
   id: ssh
   name: SSH
   repository: https://github.com/hsf-training/hsf-training-ssh-webpage/
@@ -249,9 +243,9 @@
   image: scikithep-logo.svg
   language:
     - Python
+- description: Introduction to containerization with Singularity/Apptainer. Singularity is a containerization tool (similar to Docker) that is particularly useful for HPC environments.
   level:
-    - beginner
-- description: Introduction to containerization with <a href="https://apptainer.org/">Singularity/Apptainer</a>.
+    - advanced
   id: singularity
   name: Singularity
   repository: https://github.com/hsf-training/hsf-training-singularity-webpage
@@ -261,8 +255,6 @@
   image: singularity-logo.svg
   language:
     - other
-  level:
-    - advanced
 - description: This course covers various best practices like testing, pytest, object oriented programming, packing, CI, and more.
   id: se-for-sci
   name: Software Engineering for Scientific Computing
@@ -286,9 +278,9 @@
   image: unix-shell.png
   language:
     - other
+- description: Unit testing in python.
   level:
     - beginner
-- description: <a href="https://en.wikipedia.org/wiki/Unit_testing">Unit testing</a> in python.
   id: testingpython
   language:
     - Python
@@ -298,8 +290,6 @@
   videos: ""
   webpage: http://carpentries-incubator.github.io/python-testing/
   image: pytest-logo.svg
-  level:
-    - beginner
 - description: Track code changes, undo mistakes, collaborate. This module is a must.
   id: git
   level:
