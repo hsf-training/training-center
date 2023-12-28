@@ -8,7 +8,7 @@
   image: root-logo.png
   language:
     - Python
-- description: Open <code>ROOT</code> files in <a href="https://julialang.org/">Julia</a>!
+- description: Open <code>ROOT</code> files in Julia!
   id: unroot
   name: <code>UnROOT</code>
   repository: https://github.com/Moelf/HSF_Julia_Tutorial
@@ -60,7 +60,7 @@
   image: cmake-logo.svg
   language:
     - C++
-- description: <a href="https://docs.gitlab.com/ee/ci/">Continuous integration and deployment</a> with <a href="https://github.com/features/actions">github actions</a>.
+- description: "Continuous integration and deployment with GitHub actions: automatically run unit tests and more for every commit that you push on GitHub."
   id: cicdgithub
   name: CI/CD (github)
   repository: https://github.com/hsf-training/hsf-training-cicd-github
@@ -70,7 +70,7 @@
   image: github-logo.svg
   language:
     - other
-- description: <a href="https://docs.gitlab.com/ee/ci/">Continuous integration and deployment</a> with <a href="https://about.gitlab.com/">gitlab</a>.
+- description: "Continuous integration and deployment with gitlab: automatically run unit tests and more for every commit that you push on gitlab."
   id: cicd
   name: CI/CD (gitlab)
   repository: https://github.com/hsf-training/hsf-training-cicd
@@ -80,7 +80,7 @@
   image: gitlab-logo.svg
   language:
     - other
-- description: Introduction to the <a href="https://www.docker.com/">docker</a> container image system.
+- description: "Introduction to the docker container image system. Docker allows to consistently run your code in any environment or on any machine, making it an important ingredient to analysis preservation."
   id: docker
   name: Docker
   repository: https://github.com/hsf-training/hsf-training-docker
@@ -192,7 +192,7 @@
   image: reana-logo.png
   language:
     - other
-- description: Introduction to the <a href="https://en.wikipedia.org/wiki/Ssh_(Secure_Shell)">Secure Shell (SSH)</a>
+- description: Introduction to the Secure Shell (SSH), your number one tool for remote computing
   id: ssh
   name: SSH
   repository: https://github.com/hsf-training/hsf-training-ssh-webpage/
@@ -212,7 +212,7 @@
   image: scikithep-logo.svg
   language:
     - Python
-- description: Introduction to containerization with <a href="https://apptainer.org/">Singularity/Apptainer</a>.
+- description: Introduction to containerization with Singularity/Apptainer. Singularity is a containerization tool (similar to Docker) that is particularly useful for HPC environments.
   id: singularity
   name: Singularity
   repository: https://github.com/hsf-training/hsf-training-singularity-webpage
@@ -243,7 +243,7 @@
   image: unix-shell.png
   language:
     - other
-- description: <a href="https://en.wikipedia.org/wiki/Unit_testing">Unit testing</a> in python.
+- description: Unit testing in python.
   id: testingpython
   language:
     - Python
