@@ -10,23 +10,13 @@ import "../styles/filters.css";
 
 // markup
 const Filters = ({ setTuts }) => {
-  // search query state
-  const [query, setQuery] = useState({
-    text: "",
-    status: [],
-    language: [],
-    video: false,
-    curiculum: {},
-    level: [],
-  });
-
   // Define the options displayed in the filter UI elements
   // ------------------------------------------------------
 
   // status filter options
   const statusFilter = [
     { label: "Stable", value: "stable", isDefault: true },
-    { label: "Beta", value: "beta" },
+    { label: "Beta", value: "beta", isDefault: true },
     { label: "Alpha", value: "alpha" },
   ];
 
@@ -53,6 +43,20 @@ const Filters = ({ setTuts }) => {
       value: lang,
     }));
   const languageFilter = uniqueLanguages;
+
+  // search query state
+  // IMPORTANT: Should match isDefault values in filter options
+  const [query, setQuery] = useState({
+    text: "",
+    status: statusFilter
+      .filter((option) => option.isDefault)
+      .map((e) => e.value),
+    language: [],
+    video: false,
+    curiculum: {},
+    level: levelFilter.filter((option) => option.isDefault).map((e) => e.value),
+  });
+  console.log(query);
 
   // Given a query, filter the tutorials and update the state
   // --------------------------------------------------------
@@ -165,7 +169,7 @@ const Filters = ({ setTuts }) => {
               options={statusFilter}
               isClearable={true}
               placeholder="Status..."
-              defaultValue={statusFilter.find((option) => option.isDefault)}
+              defaultValue={statusFilter.filter((option) => option.isDefault)}
               onChange={(e) => {
                 setQuery({ ...query, status: e.map((e) => e.value) });
               }}
