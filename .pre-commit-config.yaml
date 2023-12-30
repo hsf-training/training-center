@@ -26,3 +26,5 @@ repos:
     hooks:
       - id: yamlfmt
 exclude: 'node_modules/\.*|.*\.svg'
+ci:
+  autoupdate_schedule: monthly
