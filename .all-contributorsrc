@@ -1,0 +1,43 @@
+{
+  "projectName": "training-center",
+  "projectOwner": "hsf-training",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": ["README.md"],
+  "imageSize": 100,
+  "commit": true,
+  "commitConvention": "none",
+  "contributors": [
+    {
+      "login": "Aniumbott",
+      "name": "Aniket Rana",
+      "avatar_url": "https://avatars.githubusercontent.com/u/76243585?v=4",
+      "profile": "https://aniketrana.tech/",
+      "contributions": ["code", "design"]
+    },
+    {
+      "login": "klieret",
+      "name": "Kilian Lieret",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13602468?v=4",
+      "profile": "https://www.lieret.net/",
+      "contributions": ["code"]
+    },
+    {
+      "login": "ariostas",
+      "name": "Andres Rios Tascon",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7596837?v=4",
+      "profile": "https://github.com/ariostas",
+      "contributions": ["code"]
+    },
+    {
+      "login": "richa2710",
+      "name": "Richa Sharma",
+      "avatar_url": "https://avatars.githubusercontent.com/u/62288297?v=4",
+      "profile": "https://github.com/richa2710",
+      "contributions": ["code"]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "linkToUsage": true,
+  "contributorsSortAlphabetically": true
+}
