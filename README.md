@@ -2,6 +2,12 @@
 
 [Click here for the deployed webpage](https://main--nimble-pothos-1ee962.netlify.app/)
 
+## The project
+
+There is a large number of training resources for newcomers in the field of High Energy Physics. The [HSF Training group](https://hepsoftwarefoundation.org/workinggroups/training.html) together with [IRIS-HEP](https://iris-hep.org/) has started to compile a curriculum of such training modules that helps to get beginners up to speed quickly. However, the [current listing](https://hepsoftwarefoundation.org/training/curriculum.html) in the form of a static table is quickly becoming overwhelming, and we cannot include many resources because of space limitations.
+
+This project is about creating a new training center that turns the static page into a dynamic list of training content that can be filtered by attributes such as programming language, common tasks, type of training, HEP experiment, etc.
+
 ## Run it
 
 ```bash
