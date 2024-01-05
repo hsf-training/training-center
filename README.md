@@ -2,8 +2,6 @@
 
 [Click here for the deployed webpage](https://main--nimble-pothos-1ee962.netlify.app/)
 
-Originally implemented by Aniket as GSoC qualification task.
-
 ## Run it
 
 ```bash
@@ -15,6 +13,7 @@ npm run develop
 
 ## Contributors ✨
 
+This website is based on a prototype from [@aniumbott](https://https://github.com/Aniumbott/).
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
