@@ -19,7 +19,7 @@ npm run develop
 
 ## Contributors ✨
 
-This website is based on a prototype from [@aniumbott](https://https://github.com/Aniumbott/).
+This website is based on a prototype from [@aniumbott](https://github.com/Aniumbott/).
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
