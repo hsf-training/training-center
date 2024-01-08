@@ -48,7 +48,6 @@ const Filters = ({ setTuts }) => {
       .map((e) => e.value),
     language: [],
     video: false,
-    curiculum: {},
     level: levelFilter.filter((option) => option.isDefault).map((e) => e.value),
   });
   console.log(query);
@@ -91,18 +90,6 @@ const Filters = ({ setTuts }) => {
       filteredTuts = filteredTuts.filter((tut) => {
         return tut.videos !== "";
       });
-    }
-
-    if (query.curiculum.name !== undefined) {
-      let just = [];
-      filteredTuts.forEach((tut) => {
-        query.curiculum.tuts.forEach((idtut) => {
-          if (idtut.id === tut.id) {
-            return just.push(tut);
-          }
-        });
-      });
-      filteredTuts = just;
     }
 
     if (query.level.length !== 0) {
