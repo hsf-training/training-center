@@ -33,15 +33,10 @@ const Filters = ({ setTuts }) => {
     }
   });
   const allLanguages = data.reduce((acc, tut) => acc.concat(tut.language), []);
-  let uniqueLanguages = allLanguages
-    .filter(
-      (lang, index, array) =>
-        lang && array.findIndex((uLang) => uLang === lang) === index,
-    )
-    .map((lang) => ({
-      label: lang.charAt(0).toUpperCase() + lang.slice(1),
-      value: lang,
-    }));
+  let uniqueLanguages = [...new Set(allLanguages)].map((lang) => ({
+    label: lang.charAt(0).toUpperCase() + lang.slice(1),
+    value: lang,
+  }));
   const languageFilter = uniqueLanguages;
 
   // search query state
@@ -121,6 +116,10 @@ const Filters = ({ setTuts }) => {
       });
       filteredTuts = just;
     }
+
+    // This should be last: Filter any duplicates that
+    // can be introduced by the filters above
+    filteredTuts = [...new Set(filteredTuts)];
 
     setTuts(filteredTuts);
   }, [query, setTuts]);
