@@ -268,16 +268,6 @@
     - C++
   level:
     - advanced
-- description: A guide through the basics of the file systems and the shell.
-  id: unix
-  name: The UNIX Shell
-  repository: https://github.com/swcarpentry/shell-novice
-  status: stable
-  videos: ""
-  webpage: https://swcarpentry.github.io/shell-novice/
-  image: unix-shell.png
-  language:
-    - other
 - description: Unit testing in python.
   level:
     - beginner
