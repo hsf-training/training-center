@@ -58,3 +58,8 @@
         - id: levelupyourpython
         - id: root-analysis
         - id: lhcb-analysis-essentials
+    - name: "Julia corner"
+      description: "Learn Julia for fast and easy code!"
+      modules:
+        - id: julia
+        - id: unroot
