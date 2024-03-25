@@ -63,11 +63,3 @@
       modules:
         - id: julia
         - id: unroot
-    - name: "Miscellaneous"
-      description: "Other useful tools and trainings"
-      modules:
-        - id: simpleanalysis
-    - name: "Planned, in early development, or archived"
-      description: "Useful modules that are not yet ready for prime time"
-      modules:
-        - id: uproot
