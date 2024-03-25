@@ -1,6 +1,6 @@
 # Training Center
 
-[Click here for the deployed webpage](https://main--nimble-pothos-1ee962.netlify.app/)
+[Click here for the deployed webpage](https://hsf-training.org)
 
 ## The project
 
