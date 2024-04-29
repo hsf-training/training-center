@@ -15,6 +15,11 @@ const Layout = ({ pageTitle, children }) => {
     <>
       <header>
         <title>{pageTitle}</title>
+        <script
+          defer
+          data-domain="hepsoftwarefoundation.org"
+          src="https://views.scientific-python.org/js/script.js"
+        ></script>
       </header>
       {/* navbar */}
       <nav>

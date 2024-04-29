@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: `/training-center`,
   siteMetadata: {
     siteUrl: "https://hsf-training.org",
     title: "HSF Training Center",
