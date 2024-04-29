@@ -23,11 +23,15 @@ jobs:
       - name: Install node dependencies
         run: npm install
       - name: Build site
-        run: npm run build
+        run: |
+          PREFIX_PATHS=true npm run build
+          mkdir website
+          mv public website/training-center
+          cp redirect.html website/index.html
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./public
+          path: ./website
   deploy:
     if: github.event_name == 'push'
     needs: build
