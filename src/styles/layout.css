@@ -16,7 +16,7 @@ nav .container {
 }
 
 nav ul {
-  width: 7rem;
+  width: 12rem;
   list-style: none;
   display: flex;
   justify-content: space-between;
@@ -26,6 +26,7 @@ nav ul li a {
   color: #fff;
   font-size: 1rem;
   text-decoration: none;
+  margin-right: 0.7rem;
 }
 
 nav ul li a:hover {
@@ -84,7 +85,7 @@ footer .container {
     margin: auto 1rem;
   }
   nav ul {
-    width: 5rem;
+    width: 12rem;
   }
   nav ul li a {
     font-size: 0.8rem;

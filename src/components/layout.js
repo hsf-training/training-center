@@ -49,8 +49,13 @@ const Layout = ({ pageTitle, children }) => {
               </Link>
             </li>
             <li className="navLinkItem">
+              <Link to="/contribute" title="Contribute" className="navLinkText">
+                Contribute
+              </Link>
+            </li>
+            <li className="navLinkItem">
               <a
-                href="https://hepsoftwarefoundation.org/"
+                href="https://hepsoftwarefoundation.org/workinggroups/training.html"
                 target="_blank"
                 rel="noopener noreferrer"
                 title="About"
