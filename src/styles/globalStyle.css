@@ -20,6 +20,13 @@ a {
   transition: all 0.2s ease-in-out;
 }
 
+.a-no-style {
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  text-decoration: underline !important;
+  color: blue !important;
+}
+
 input {
   font-family: jetbrainsmono, sans-serif !important;
   outline: none;
