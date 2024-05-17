@@ -302,3 +302,13 @@
   image: git-logo.svg
   language:
     - other
+- description: pyhf user guide and tutorial
+  id: pyhf
+  name: <code>pyhf</code>
+  repository: https://github.com/pyhf/pyhf-tutorial
+  status: stable
+  videos: ""
+  webpage: https://pyhf.github.io/pyhf-tutorial/
+  image: pyhf-logo.svg
+  language:
+    - Python
