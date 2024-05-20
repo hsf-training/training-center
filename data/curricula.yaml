@@ -36,6 +36,7 @@
         - id: unroot
         - id: reana
         - id: root-analysis
+        - id: pyhf
     - name: "Data Analysis"
       description: "Machine learning and other analysis tools"
       modules:
