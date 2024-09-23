@@ -1,10 +1,10 @@
 - description: The most famous data analysis framework used in HEP.
   id: root
   name: <code>ROOT</code>
-  repository: https://github.com/root-project/software-carpentry
+  repository: https://github.com/root-project/student-course
   status: stable
-  videos: ""
-  webpage: https://github.com/root-project/software-carpentry
+  videos: https://videos.cern.ch/record/2300516
+  webpage: https://github.com/root-project/student-course
   image: root-logo.png
   language:
     - Python
