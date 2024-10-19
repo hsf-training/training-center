@@ -30,7 +30,7 @@ const ContributePage = () => {
           Join our <b>meetings</b> to give feedback and discuss with us (details
           at our{" "}
           <a
-            href="https://hepsoftwarefoundation.org/workinggroups/training.html"
+            href="https://hepsoftwarefoundation.org/activities/training.html"
             className="a-no-style"
           >
             main page
