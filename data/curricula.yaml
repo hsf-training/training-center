@@ -8,7 +8,6 @@
         - id: git
         - id: python
         - id: ssh
-        - id: ml
         - id: matplotlib
         - id: root
     - name: "Software Development and Deployment"
@@ -40,6 +39,9 @@
     - name: "Data Analysis"
       description: "Machine learning and other analysis tools"
       modules:
+        - id: array
+        - id: array-puzzles
+        - id: ml-hep
         - id: ml
         - id: gpuml
     - name: "Analysis preservation"
