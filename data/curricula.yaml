@@ -42,7 +42,6 @@
         - id: array
         - id: array-puzzles
         - id: ml-hep
-        - id: ml
         - id: gpuml
     - name: "Analysis preservation"
       description: "Learn how to ensure that your analysis survives the test of time."

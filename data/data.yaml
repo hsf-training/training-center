@@ -151,23 +151,11 @@
     - Python
   level:
     - advanced
-- description: Get behind the buzzword and teach machines to work for you intelligently!
-  id: ml
-  name: Machine learning
-  repository: https://github.com/hsf-training/hsf-training-ml-webpage
-  status: stable
-  videos: https://www.youtube.com/playlist?list=PLKZ9c4ONm-VmHsMKImIDEMsZI1Vp0UY-Z
-  webpage: https://hsf-training.github.io/hsf-training-ml-webpage
-  image: ml-icon.svg
-  language:
-    - Python
-  level:
-    - beginner
-- description: Speed up your machine learning using massive parallelization!
+- description: Speed up your machine learning using massive parallelization! It is highly recommended to first go through the "Deep learning for particle physicists" tutorial.
   id: gpuml
   name: Machine learning on GPU
   repository: https://github.com/hsf-training/hsf-training-ml-gpu-webpage
-  status: stable
+  status: beta
   videos: https://www.youtube.com/playlist?list=PLKZ9c4ONm-VnfKk7XrVUa-V42lUdMrB6M
   webpage: https://hsf-training.github.io/hsf-training-ml-gpu-webpage
   image: pytorch-logo.svg
