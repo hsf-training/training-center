@@ -151,23 +151,11 @@
     - Python
   level:
     - advanced
-- description: Get behind the buzzword and teach machines to work for you intelligently!
-  id: ml
-  name: Machine learning
-  repository: https://github.com/hsf-training/hsf-training-ml-webpage
-  status: stable
-  videos: https://www.youtube.com/playlist?list=PLKZ9c4ONm-VmHsMKImIDEMsZI1Vp0UY-Z
-  webpage: https://hsf-training.github.io/hsf-training-ml-webpage
-  image: ml-icon.svg
-  language:
-    - Python
-  level:
-    - beginner
-- description: Speed up your machine learning using massive parallelization!
+- description: Speed up your machine learning using massive parallelization! It is highly recommended to first go through the "Deep learning for particle physicists" tutorial.
   id: gpuml
   name: Machine learning on GPU
   repository: https://github.com/hsf-training/hsf-training-ml-gpu-webpage
-  status: stable
+  status: beta
   videos: https://www.youtube.com/playlist?list=PLKZ9c4ONm-VnfKk7XrVUa-V42lUdMrB6M
   webpage: https://hsf-training.github.io/hsf-training-ml-gpu-webpage
   image: pytorch-logo.svg
@@ -312,3 +300,39 @@
   image: pyhf-logo.svg
   language:
     - Python
+- description: Learn about neural networks in the context of particle physics.
+  id: ml-hep
+  name: Deep learning for particle physicists
+  repository: https://github.com/hsf-training/deep-learning-intro-for-hep
+  status: stable
+  videos: ""
+  webpage: https://hsf-training.github.io/deep-learning-intro-for-hep/
+  image: ml-hep.svg
+  language:
+    - Python
+  level:
+    - beginner
+- description: Learn how to easily and efficiently process your data with array-oriented programming!
+  id: array
+  name: Array-oriented programming for particle physicists
+  repository: https://github.com/hsf-training/array-oriented-programming
+  status: stable
+  videos: ""
+  webpage: https://hsf-training.github.io/array-oriented-programming/
+  image: cube.svg
+  language:
+    - Python
+  level:
+    - beginner
+- description: Test your skills on data manipulation by solving puzzles using array-oriented programming!
+  id: array-puzzles
+  name: Array-oriented puzzles
+  repository: https://github.com/hsf-training/array-oriented-puzzles
+  status: stable
+  videos: ""
+  webpage: https://hsf-training.github.io/array-oriented-puzzles/lab/index.html?path=tutorial.ipynb
+  image: puzzle.svg
+  language:
+    - Python
+  level:
+    - beginner
