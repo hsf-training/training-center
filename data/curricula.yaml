@@ -65,3 +65,7 @@
       modules:
         - id: julia
         - id: unroot
+    - name: "Spanish corner"
+      description: "Aprende a usar herramientas de HEP en español."
+      modules:
+        - id: scikithep-es
