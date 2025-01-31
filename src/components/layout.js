@@ -25,18 +25,19 @@ const Layout = ({ pageTitle, children }) => {
       <nav>
         <div className="container">
           <a title="HSF Training Center" href="/">
+            {/* remove images work better than local ones because redirection sometime causes them to not show up */}
             <StaticImage
               className="img"
-              src="../images/hsf.svg"
+              src="https://raw.githubusercontent.com/HSF/hsf.github.io/refs/heads/main/images/HSF-logo/hsf-logo-no-text.png"
               height={40}
               style={{ position: "absolute", top: "5px", left: "30px" }}
               alt="hsf logo"
             ></StaticImage>
             <StaticImage
               className="img"
-              src="../images/iris-hep.svg"
-              height={50}
-              style={{ position: "absolute", top: "-1px", left: "80px" }}
+              src="https://raw.githubusercontent.com/iris-hep/iris-hep.github.io/refs/heads/master/assets/logos/Iris-hep-4-no-long-name.png"
+              height={40}
+              style={{ position: "absolute", top: "5px", left: "120px" }}
               alt="iris hep logo"
             ></StaticImage>
           </a>
