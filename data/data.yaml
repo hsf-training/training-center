@@ -336,3 +336,13 @@
     - Python
   level:
     - beginner
+- description: Una colección de paquetes para el análisis de física de partículas en Python.
+  id: scikithep-es
+  name: Scikit-HEP
+  repository: https://github.com/hsf-training/hsf-training-scikit-hep-webpage-es
+  status: beta
+  videos: ""
+  webpage: https://hsf-training.github.io/hsf-training-scikit-hep-webpage-es/
+  image: scikithep-logo.svg
+  language:
+    - Python
