@@ -283,10 +283,10 @@
   level:
     - beginner
   name: Version controlling with git
-  repository: https://github.com/swcarpentry/git-novice
+  repository: https://github.com/hsf-training/git-novice
   status: stable
   videos: ""
-  webpage: http://swcarpentry.github.io/git-novice
+  webpage: https://hsf-training.github.io/git-novice
   image: git-logo.svg
   language:
     - other
