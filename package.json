@@ -12,7 +12,7 @@
     "develop": "npm run develop:sitemap && gatsby develop",
     "start": "gatsby develop",
     "build:sitemap": "./src/scripts/generate-sitemap.sh",
-    "build": "npm run build:sitemap && gatsby build",
+    "build": "gatsby build && npm run build:sitemap",
     "serve": "gatsby serve",
     "clean": "gatsby clean"
   },
