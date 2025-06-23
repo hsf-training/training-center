@@ -8,9 +8,11 @@
     "gatsby"
   ],
   "scripts": {
-    "develop": "gatsby develop",
+    "develop:sitemap": "./src/scripts/generate-sitemap.sh",
+    "develop": "npm run develop:sitemap && gatsby develop",
     "start": "gatsby develop",
-    "build": "gatsby build",
+    "build:sitemap": "./src/scripts/generate-sitemap.sh",
+    "build": "gatsby build && npm run build:sitemap",
     "serve": "gatsby serve",
     "clean": "gatsby clean"
   },
@@ -28,6 +30,7 @@
     "html-react-parser": "^5.0.0",
     "react-icons": "^4.8.0",
     "react-select": "^5.7.0",
-    "react-tabs": "^6.0.2"
+    "react-tabs": "^6.0.2",
+    "yaml": "^2.8.0"
   }
 }
