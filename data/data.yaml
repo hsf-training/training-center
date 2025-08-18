@@ -259,10 +259,10 @@
 - description: A guide through the basics of the file systems and the shell.
   id: unix
   name: The UNIX Shell
-  repository: https://github.com/swcarpentry/shell-novice
+  repository: https://github.com/hsf-training/hsf-training-unix-shell
   status: stable
   videos: ""
-  webpage: https://swcarpentry.github.io/shell-novice/
+  webpage: https://hsf-training.github.io/hsf-training-unix-shell
   image: unix-shell.png
   language:
     - other
