@@ -32,6 +32,8 @@ const ContributePage = () => {
           <a
             href="https://hepsoftwarefoundation.org/activities/training.html"
             className="a-no-style"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             main page
           </a>
@@ -39,7 +41,12 @@ const ContributePage = () => {
         </li>
         <li>
           <b>Bugs reports or feature requests</b>: Directly open an issue on{" "}
-          <a href="https://github.com/hsf-training" className="a-no-style">
+          <a 
+            href="https://github.com/hsf-training" 
+            className="a-no-style"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             GitHub
           </a>{" "}
           or (even better) submit a pull request to fix things.
@@ -50,6 +57,8 @@ const ContributePage = () => {
           <a
             href="https://hepsoftwarefoundation.org/training/module-guidelines.html"
             className="a-no-style"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             here
           </a>
@@ -58,6 +67,8 @@ const ContributePage = () => {
           <a
             href="https://github.com/hsf-training/carpentry-cookiecutter"
             className="a-no-style"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             creating a new module
           </a>
@@ -68,6 +79,8 @@ const ContributePage = () => {
           <a
             href="https://hepsoftwarefoundation.org/training/educators.html"
             className="a-no-style"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             More information on the different roles in our training events
           </a>
@@ -77,6 +90,8 @@ const ContributePage = () => {
           <a
             href="https://hepsoftwarefoundation.org/training/howto-event.html"
             className="a-no-style"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             We got you covered
           </a>
