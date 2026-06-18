@@ -41,8 +41,8 @@ const ContributePage = () => {
         </li>
         <li>
           <b>Bugs reports or feature requests</b>: Directly open an issue on{" "}
-          <a 
-            href="https://github.com/hsf-training" 
+          <a
+            href="https://github.com/hsf-training"
             className="a-no-style"
             target="_blank"
             rel="noopener noreferrer"

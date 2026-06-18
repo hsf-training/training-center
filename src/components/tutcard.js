@@ -44,7 +44,12 @@ const Tutcard = ({ tut }) => {
       {/* GitHub and Videos links */}
       <div className="additionals">
         {tut.repository !== "" ? (
-          <a title="GitHub Repo" href={tut.repository} target="_blank" rel="noopener noreferrer">
+          <a
+            title="GitHub Repo"
+            href={tut.repository}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <AiFillGithub height={300} />
             <span style={{ marginLeft: "8px" }}>GitHub</span>
           </a>
@@ -52,7 +57,12 @@ const Tutcard = ({ tut }) => {
       </div>
       <div className="videos">
         {tut.videos !== "" ? (
-          <a title="Videos" href={tut.videos} target="_blank" rel="noopener noreferrer">
+          <a
+            title="Videos"
+            href={tut.videos}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <MdVideoLibrary height={300} />
             <span style={{ marginLeft: "8px" }}>Videos</span>
           </a>
@@ -72,7 +82,12 @@ const Tutcard = ({ tut }) => {
       {/* texts */}
       <div className="tutCardText">
         {/* title */}
-        <a title={tut.name} href={tut.webpage} target="_blank" rel="noopener noreferrer">
+        <a
+          title={tut.name}
+          href={tut.webpage}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <h3>{parse(tut.name)}</h3>
         </a>
 
