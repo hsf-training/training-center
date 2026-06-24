@@ -49,6 +49,7 @@ const Tutcard = ({ tut }) => {
             href={tut.repository}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={(e) => e.stopPropagation()}
           >
             <AiFillGithub height={300} />
             <span style={{ marginLeft: "8px" }}>GitHub</span>
@@ -62,6 +63,7 @@ const Tutcard = ({ tut }) => {
             href={tut.videos}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={(e) => e.stopPropagation()}
           >
             <MdVideoLibrary height={300} />
             <span style={{ marginLeft: "8px" }}>Videos</span>
@@ -87,6 +89,7 @@ const Tutcard = ({ tut }) => {
           href={tut.webpage}
           target="_blank"
           rel="noopener noreferrer"
+          onClick={(e) => e.stopPropagation()}
         >
           <h3>{parse(tut.name)}</h3>
         </a>
