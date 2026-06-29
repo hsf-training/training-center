@@ -26,7 +26,10 @@ const Filters = ({ setTuts }) => {
     { label: "Advanced", value: "advanced", isDefault: true },
   ];
   // language filter options
-  const allLanguages = data.reduce((acc, tut) => acc.concat(tut.language || []), []);
+  const allLanguages = data.reduce(
+    (acc, tut) => acc.concat(tut.language || []),
+    [],
+  );
   let uniqueLanguages = [...new Set(allLanguages)].map((lang) => ({
     label: lang.charAt(0).toUpperCase() + lang.slice(1),
     value: lang,

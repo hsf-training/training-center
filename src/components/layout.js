@@ -22,11 +22,7 @@ const Layout = ({ children }) => {
             to="/"
             style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}
           >
-            <img
-              src={images("./hsf.svg").default}
-              height={46}
-              alt="hsf logo"
-            />
+            <img src={images("./hsf.svg").default} height={46} alt="hsf logo" />
             <img
               src={images("./iris-hep.svg").default}
               height={46}

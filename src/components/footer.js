@@ -7,7 +7,11 @@ const Footer = () => {
       <div className="container">
         <p>
           Copyright 2026{" "}
-          <a href="https://hepsoftwarefoundation.org/" target="_blank" rel="noopener">
+          <a
+            href="https://hepsoftwarefoundation.org/"
+            target="_blank"
+            rel="noopener"
+          >
             HEP Software Foundation
           </a>{" "}
           and{" "}
