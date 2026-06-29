@@ -13,7 +13,7 @@ const images = require.context("../images");
 // markup
 const Tutcard = ({ tut }) => {
   const handleCardClick = () => {
-    window.location.href = tut.webpage;
+    window.open(tut.webpage, "_blank", "noopener");
   };
   const handleCardKeyPress = (e) => {
     if (e.key === "Enter") {
@@ -44,17 +44,59 @@ const Tutcard = ({ tut }) => {
       {/* GitHub and Videos links */}
       <div className="additionals">
         {tut.repository !== "" ? (
-          <a title="GitHub Repo" href={tut.repository}>
+          <a
+            title="GitHub Repo"
+            href={tut.repository}
+            target="_blank"
+            rel="noopener"
+            onClick={(e) => e.stopPropagation()}
+          >
             <AiFillGithub height={300} />
-            <span style={{ marginLeft: "8px" }}>GitHub</span>
+            <span style={{ marginLeft: "8px" }}>
+              GitHub
+              <svg
+                aria-hidden="true"
+                width="12"
+                height="12"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+              >
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                <polyline points="15 3 21 3 21 9" />
+                <line x1="10" y1="14" x2="21" y2="3" />
+              </svg>
+            </span>
           </a>
         ) : null}
       </div>
       <div className="videos">
         {tut.videos !== "" ? (
-          <a title="Videos" href={tut.videos}>
+          <a
+            title="Videos"
+            href={tut.videos}
+            target="_blank"
+            rel="noopener"
+            onClick={(e) => e.stopPropagation()}
+          >
             <MdVideoLibrary height={300} />
-            <span style={{ marginLeft: "8px" }}>Videos</span>
+            <span style={{ marginLeft: "8px" }}>
+              Videos
+              <svg
+                aria-hidden="true"
+                width="12"
+                height="12"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+              >
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                <polyline points="15 3 21 3 21 9" />
+                <line x1="10" y1="14" x2="21" y2="3" />
+              </svg>
+            </span>
           </a>
         ) : null}
       </div>
@@ -72,7 +114,13 @@ const Tutcard = ({ tut }) => {
       {/* texts */}
       <div className="tutCardText">
         {/* title */}
-        <a title={tut.name} href={tut.webpage}>
+        <a
+          title={tut.name}
+          href={tut.webpage}
+          target="_blank"
+          rel="noopener"
+          onClick={(e) => e.stopPropagation()}
+        >
           <h3>{parse(tut.name)}</h3>
         </a>
 
