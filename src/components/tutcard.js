@@ -58,6 +58,33 @@ const Tutcard = ({ tut }) => {
       onKeyDown={handleCardKeyPress}
       style={{ cursor: "pointer" }}
     >
+      {/* hero-image */}
+      <div className="tutCardImg">
+        <img
+          className="hero-image"
+          src={images("./" + (tut.image ? tut.image : "hsf.svg")).default}
+          height={300}
+          alt={tut.name}
+        ></img>
+      </div>
+
+      {/* texts */}
+      <div className="tutCardText">
+        {/* title */}
+        <a
+          title={tut.name}
+          href={tut.webpage}
+          target="_blank"
+          rel="noopener"
+          onClick={(e) => e.stopPropagation()}
+        >
+          <h3>{parse(tut.name)}</h3>
+        </a>
+
+        {/* description */}
+        <p>{parse(tut.description)}</p>
+      </div>
+
       {/* GitHub and Videos links */}
       <div className="links">
         <div className="additionals">
@@ -96,32 +123,6 @@ const Tutcard = ({ tut }) => {
         </div>
       </div>
 
-      {/* hero-image */}
-      <div className="tutCardImg">
-        <img
-          className="hero-image"
-          src={images("./" + (tut.image ? tut.image : "hsf.svg")).default}
-          height={300}
-          alt={tut.name}
-        ></img>
-      </div>
-
-      {/* texts */}
-      <div className="tutCardText">
-        {/* title */}
-        <a
-          title={tut.name}
-          href={tut.webpage}
-          target="_blank"
-          rel="noopener"
-          onClick={(e) => e.stopPropagation()}
-        >
-          <h3>{parse(tut.name)}</h3>
-        </a>
-
-        {/* description */}
-        <p>{parse(tut.description)}</p>
-      </div>
       <div className={statusClassMapping[tut.status]} title={tut.status}>
         {statusDescriptionMapping[tut.status]}
       </div>
