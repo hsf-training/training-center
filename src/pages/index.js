@@ -24,7 +24,7 @@ const IndexPage = () => {
   ];
 
   return (
-    <Layout pageTitle="Home Page">
+    <Layout>
       <Tabs>
         <TabList>
           <Tab>Curriculum</Tab>

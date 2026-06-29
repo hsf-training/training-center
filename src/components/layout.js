@@ -10,22 +10,14 @@ import "../styles/layout.css";
 import Footer from "./footer";
 
 // markup
-const Layout = ({ pageTitle, children }) => {
+const Layout = ({ children }) => {
   return (
     <>
-      <header>
-        <title>{pageTitle}</title>
-        <script
-          defer
-          data-domain="hepsoftwarefoundation.org"
-          src="https://views.scientific-python.org/js/script.js"
-        ></script>
-      </header>
       {/* navbar */}
       <nav>
         <div className="container">
-          <a title="HSF Training Center" href="/">
-            {/* remove images work better than local ones because redirection sometime causes them to not show up */}
+          <Link title="HSF Training Center" to="/">
+            {/* Remote images work better than local ones because redirection sometimes causes them to not show up */}
             <StaticImage
               className="img"
               src="https://raw.githubusercontent.com/HSF/hsf.github.io/refs/heads/main/images/HSF-logo/hsf-logo-no-text.png"
@@ -40,7 +32,7 @@ const Layout = ({ pageTitle, children }) => {
               style={{ position: "absolute", top: "5px", left: "120px" }}
               alt="iris hep logo"
             ></StaticImage>
-          </a>
+          </Link>
         </div>
         <div className="container">
           <ul className="navLinks">

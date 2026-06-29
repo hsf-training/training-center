@@ -5,7 +5,7 @@ import Seo from "../components/seo";
 // markup
 const ContributePage = () => {
   return (
-    <Layout pageTitle="Contribute">
+    <Layout>
       <br />
       <br />
       Training in software and computing are essential ingredients for the
@@ -16,7 +16,7 @@ const ContributePage = () => {
       parallel, instills best practices for writing software.
       <br />
       <br />
-      The curriculum is composed of a set of <it>modules</it> (developed by HSF,
+      The curriculum is composed of a set of <em>modules</em> (developed by HSF,
       Software Carpentries, and other organizations), so that learners/students
       can focus on what is most relevant to them.
       <br />

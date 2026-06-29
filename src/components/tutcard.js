@@ -16,7 +16,8 @@ const Tutcard = ({ tut }) => {
     window.open(tut.webpage, "_blank", "noopener");
   };
   const handleCardKeyPress = (e) => {
-    if (e.key === "Enter") {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
       handleCardClick();
     }
   };
