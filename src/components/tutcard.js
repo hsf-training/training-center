@@ -10,6 +10,22 @@ import { MdVideoLibrary } from "react-icons/md";
 
 const images = require.context("../images");
 
+const ExternalLinkIcon = () => (
+  <svg
+    aria-hidden="true"
+    width="12"
+    height="12"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+  >
+    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+    <polyline points="15 3 21 3 21 9" />
+    <line x1="10" y1="14" x2="21" y2="3" />
+  </svg>
+);
+
 // markup
 const Tutcard = ({ tut }) => {
   const handleCardClick = () => {
@@ -55,19 +71,7 @@ const Tutcard = ({ tut }) => {
             <AiFillGithub height={300} />
             <span style={{ marginLeft: "8px" }}>
               GitHub
-              <svg
-                aria-hidden="true"
-                width="12"
-                height="12"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-              >
-                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                <polyline points="15 3 21 3 21 9" />
-                <line x1="10" y1="14" x2="21" y2="3" />
-              </svg>
+              <ExternalLinkIcon />
             </span>
           </a>
         ) : null}
@@ -84,19 +88,7 @@ const Tutcard = ({ tut }) => {
             <MdVideoLibrary height={300} />
             <span style={{ marginLeft: "8px" }}>
               Videos
-              <svg
-                aria-hidden="true"
-                width="12"
-                height="12"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-              >
-                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                <polyline points="15 3 21 3 21 9" />
-                <line x1="10" y1="14" x2="21" y2="3" />
-              </svg>
+              <ExternalLinkIcon />
             </span>
           </a>
         ) : null}
