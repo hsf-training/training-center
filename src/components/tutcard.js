@@ -59,39 +59,41 @@ const Tutcard = ({ tut }) => {
       style={{ cursor: "pointer" }}
     >
       {/* GitHub and Videos links */}
-      <div className="additionals">
-        {tut.repository !== "" ? (
-          <a
-            title="GitHub Repo"
-            href={tut.repository}
-            target="_blank"
-            rel="noopener"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <AiFillGithub height={300} />
-            <span style={{ marginLeft: "8px" }}>
-              GitHub
-              <ExternalLinkIcon />
-            </span>
-          </a>
-        ) : null}
-      </div>
-      <div className="videos">
-        {tut.videos !== "" ? (
-          <a
-            title="Videos"
-            href={tut.videos}
-            target="_blank"
-            rel="noopener"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <MdVideoLibrary height={300} />
-            <span style={{ marginLeft: "8px" }}>
-              Videos
-              <ExternalLinkIcon />
-            </span>
-          </a>
-        ) : null}
+      <div className="links">
+        <div className="additionals">
+          {tut.repository !== "" ? (
+            <a
+              title="GitHub Repo"
+              href={tut.repository}
+              target="_blank"
+              rel="noopener"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <AiFillGithub height={300} />
+              <span style={{ marginLeft: "8px" }}>
+                GitHub
+                <ExternalLinkIcon />
+              </span>
+            </a>
+          ) : null}
+        </div>
+        <div className="videos">
+          {tut.videos !== "" ? (
+            <a
+              title="Videos"
+              href={tut.videos}
+              target="_blank"
+              rel="noopener"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <MdVideoLibrary height={300} />
+              <span style={{ marginLeft: "8px" }}>
+                Videos
+                <ExternalLinkIcon />
+              </span>
+            </a>
+          ) : null}
+        </div>
       </div>
 
       {/* hero-image */}

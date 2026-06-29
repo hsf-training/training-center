@@ -58,40 +58,30 @@ code {
   color: #fca311;
 }
 
-.tutCard .additionals {
+.tutCard .links {
   position: absolute;
   top: 0.8rem;
   right: 0.8rem;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: flex-end;
-  font-size: 1.2rem;
-  color: #4b5563;
+  gap: 0.5rem;
 }
 
-.tutCard .additionals a {
-  margin: 0 0.25rem;
-}
-
-.tutCard .additionals a:hover {
-  color: #fca311;
-}
-
+.tutCard .additionals,
 .tutCard .videos {
-  position: absolute;
-  top: 2.5rem;
-  right: 0.8rem;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
   font-size: 1.2rem;
   color: #4b5563;
 }
 
+.tutCard .additionals a,
 .tutCard .videos a {
   margin: 0 0.25rem;
 }
 
+.tutCard .additionals a:hover,
 .tutCard .videos a:hover {
   color: #fca311;
 }
@@ -136,11 +126,14 @@ code {
     max-width: 95%;
   }
 
-  .tutCard .additionals {
-    width: 100%;
+  .tutCard .links {
     position: relative;
-    justify-content: flex-start;
     top: 0;
     right: 0;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 1rem;
+    width: 100%;
+    margin-bottom: 0.5rem;
   }
 }
