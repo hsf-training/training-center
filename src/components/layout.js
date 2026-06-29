@@ -1,6 +1,7 @@
 import * as React from "react";
-import { StaticImage } from "gatsby-plugin-image";
 import { Link } from "gatsby";
+
+const images = require.context("../images");
 
 // styles
 import "../styles/globalStyle.css";
@@ -16,22 +17,21 @@ const Layout = ({ children }) => {
       {/* navbar */}
       <nav>
         <div className="container">
-          <Link title="HSF Training Center" to="/">
-            {/* Remote images work better than local ones because redirection sometimes causes them to not show up */}
-            <StaticImage
-              className="img"
-              src="https://raw.githubusercontent.com/HSF/hsf.github.io/refs/heads/main/images/HSF-logo/hsf-logo-no-text.png"
-              height={40}
-              style={{ position: "absolute", top: "5px", left: "30px" }}
+          <Link
+            title="HSF Training Center"
+            to="/"
+            style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}
+          >
+            <img
+              src={images("./hsf.svg").default}
+              height={46}
               alt="hsf logo"
-            ></StaticImage>
-            <StaticImage
-              className="img"
-              src="https://raw.githubusercontent.com/iris-hep/iris-hep.github.io/refs/heads/master/assets/logos/Iris-hep-4-no-long-name.png"
-              height={40}
-              style={{ position: "absolute", top: "5px", left: "120px" }}
+            />
+            <img
+              src={images("./iris-hep.svg").default}
+              height={46}
               alt="iris hep logo"
-            ></StaticImage>
+            />
           </Link>
         </div>
         <div className="container">

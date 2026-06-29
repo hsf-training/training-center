@@ -5,7 +5,7 @@ nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  height: 3rem;
+  height: 3.5rem;
 }
 
 nav .container {
