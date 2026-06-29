@@ -1,6 +1,7 @@
 import * as React from "react";
-import { StaticImage } from "gatsby-plugin-image";
 import { Link } from "gatsby";
+
+const images = require.context("../images");
 
 // styles
 import "../styles/globalStyle.css";
@@ -10,37 +11,24 @@ import "../styles/layout.css";
 import Footer from "./footer";
 
 // markup
-const Layout = ({ pageTitle, children }) => {
+const Layout = ({ children }) => {
   return (
     <>
-      <header>
-        <title>{pageTitle}</title>
-        <script
-          defer
-          data-domain="hepsoftwarefoundation.org"
-          src="https://views.scientific-python.org/js/script.js"
-        ></script>
-      </header>
       {/* navbar */}
       <nav>
         <div className="container">
-          <a title="HSF Training Center" href="/">
-            {/* remove images work better than local ones because redirection sometime causes them to not show up */}
-            <StaticImage
-              className="img"
-              src="https://raw.githubusercontent.com/HSF/hsf.github.io/refs/heads/main/images/HSF-logo/hsf-logo-no-text.png"
-              height={40}
-              style={{ position: "absolute", top: "5px", left: "30px" }}
-              alt="hsf logo"
-            ></StaticImage>
-            <StaticImage
-              className="img"
-              src="https://raw.githubusercontent.com/iris-hep/iris-hep.github.io/refs/heads/master/assets/logos/Iris-hep-4-no-long-name.png"
-              height={40}
-              style={{ position: "absolute", top: "5px", left: "120px" }}
+          <Link
+            title="HSF Training Center"
+            to="/"
+            style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}
+          >
+            <img src={images("./hsf.svg").default} height={46} alt="hsf logo" />
+            <img
+              src={images("./iris-hep.svg").default}
+              height={46}
               alt="iris hep logo"
-            ></StaticImage>
-          </a>
+            />
+          </Link>
         </div>
         <div className="container">
           <ul className="navLinks">

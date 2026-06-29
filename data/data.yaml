@@ -197,7 +197,7 @@
   repository: https://github.com/swcarpentry/python-novice-inflammation
   status: stable
   videos: ""
-  webpage: http://swcarpentry.github.io/python-novice-inflammation
+  webpage: https://swcarpentry.github.io/python-novice-inflammation
   image: python-logo.svg
 - description: Run containerised data analysis pipelines on remote compute clouds.
   id: reana
@@ -276,7 +276,7 @@
   repository: https://github.com/carpentries-incubator/python-testing
   status: beta
   videos: ""
-  webpage: http://carpentries-incubator.github.io/python-testing/
+  webpage: https://carpentries-incubator.github.io/python-testing/
   image: pytest-logo.svg
 - description: Track code changes, undo mistakes, collaborate. This module is a must.
   id: git

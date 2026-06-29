@@ -26,13 +26,10 @@ const Filters = ({ setTuts }) => {
     { label: "Advanced", value: "advanced", isDefault: true },
   ];
   // language filter options
-  // We set the language fields to lowercase to avoid duplicates
-  data.forEach((tut) => {
-    if (tut.language) {
-      tut.language.forEach((lang) => lang.toLowerCase());
-    }
-  });
-  const allLanguages = data.reduce((acc, tut) => acc.concat(tut.language), []);
+  const allLanguages = data.reduce(
+    (acc, tut) => acc.concat(tut.language || []),
+    [],
+  );
   let uniqueLanguages = [...new Set(allLanguages)].map((lang) => ({
     label: lang.charAt(0).toUpperCase() + lang.slice(1),
     value: lang,
@@ -50,7 +47,6 @@ const Filters = ({ setTuts }) => {
     video: false,
     level: levelFilter.filter((option) => option.isDefault).map((e) => e.value),
   });
-  console.log(query);
 
   // Given a query, filter the tutorials and update the state
   // --------------------------------------------------------

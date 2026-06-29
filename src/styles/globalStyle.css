@@ -22,7 +22,6 @@ a {
 }
 
 .a-no-style {
-  text-decoration: none;
   transition: all 0.2s ease-in-out;
   text-decoration: underline !important;
   color: blue !important;

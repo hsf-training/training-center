@@ -13,9 +13,16 @@ const Seo = ({ title }) => {
   `);
 
   return (
-    <title>
-      {title} | {data.site.siteMetadata.title}
-    </title>
+    <>
+      <title>
+        {title} | {data.site.siteMetadata.title}
+      </title>
+      <script
+        defer
+        data-domain="hepsoftwarefoundation.org"
+        src="https://views.scientific-python.org/js/script.js"
+      />
+    </>
   );
 };
 

@@ -24,7 +24,7 @@ const IndexPage = () => {
   ];
 
   return (
-    <Layout pageTitle="Home Page">
+    <Layout>
       <Tabs>
         <TabList>
           <Tab>Curriculum</Tab>
@@ -41,9 +41,7 @@ const IndexPage = () => {
                   {group.description}
                   <div className="tuts-container">
                     {group.modules.map((module, key) => {
-                      {
-                        /* don't use tuts here, the filters might have modified it */
-                      }
+                      // don't use tuts here, the filters might have modified it
                       var tut = data.find((x) => x.id === module.id);
                       if (tut === undefined) {
                         return "Undefined: " + module.id;
