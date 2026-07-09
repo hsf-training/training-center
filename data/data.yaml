@@ -118,10 +118,10 @@
 - description: An introduction to Julia for HEP, especially for those familiar with Python (or C++)
   id: julia
   name: Julia
-  repository: https://github.com/JuliaHEP/JuliaHEP-2023
+  repository: https://github.com/JuliaHEP/Hands-on-Julia-for-particle-physicists
   status: stable
   videos: ""
-  webpage: https://juliahep.github.io/JuliaHEP-2023/intro.html
+  webpage: https://juliahep.github.io/Hands-on-Julia-for-particle-physicists/00-intro.html
   image: julia-logo.svg
   language:
     - Julia
