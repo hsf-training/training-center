@@ -145,7 +145,7 @@
   repository: https://github.com/henryiii/level-up-your-python
   status: stable
   videos: ""
-  webpage: https://henryiii.github.io/level-up-your-python/notebooks/0%20Intro.html
+  webpage: https://henryiii.github.io/level-up-your-python/
   image: levelupyourpython-logo.svg
   language:
     - Python
