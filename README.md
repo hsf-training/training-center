@@ -20,7 +20,7 @@ npm run develop
 ## Contributors ✨
 
 This website is based on a prototype from [@aniumbott](https://github.com/Aniumbott/).
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/en/reference/emoji-key/)):
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
@@ -29,7 +29,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tbody>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/ariostas"><img src="https://avatars.githubusercontent.com/u/7596837?v=4?s=100" width="100px;" alt="Andres Rios Tascon"/><br /><sub><b>Andres Rios Tascon</b></sub></a><br /><a href="https://github.com/hsf-training/training-center/commits?author=ariostas" title="Code">💻</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://aniketrana.tech/"><img src="https://avatars.githubusercontent.com/u/76243585?v=4?s=100" width="100px;" alt="Aniket Rana"/><br /><sub><b>Aniket Rana</b></sub></a><br /><a href="https://github.com/hsf-training/training-center/commits?author=Aniumbott" title="Code">💻</a> <a href="#design-Aniumbott" title="Design">🎨</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Aniumbott"><img src="https://avatars.githubusercontent.com/u/76243585?v=4?s=100" width="100px;" alt="Aniket Rana"/><br /><sub><b>Aniket Rana</b></sub></a><br /><a href="https://github.com/hsf-training/training-center/commits?author=Aniumbott" title="Code">💻</a> <a href="#design-Aniumbott" title="Design">🎨</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://www.lieret.net/"><img src="https://avatars.githubusercontent.com/u/13602468?v=4?s=100" width="100px;" alt="Kilian Lieret"/><br /><sub><b>Kilian Lieret</b></sub></a><br /><a href="https://github.com/hsf-training/training-center/commits?author=klieret" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/richa2710"><img src="https://avatars.githubusercontent.com/u/62288297?v=4?s=100" width="100px;" alt="Richa Sharma"/><br /><sub><b>Richa Sharma</b></sub></a><br /><a href="https://github.com/hsf-training/training-center/commits?author=richa2710" title="Code">💻</a></td>
     </tr>
