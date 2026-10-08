@@ -5,6 +5,9 @@
 
 [build.environment]
   NODE_VERSION = "24"
+  # The Gatsby plugin is still installed in the Netlify UI from when the
+  # site used Gatsby, and fails the build if it runs
+  NETLIFY_SKIP_GATSBY_BUILD_PLUGIN = "true"
 
 # The site is built to be served under /training-center/, as on GitHub Pages
 [[redirects]]
