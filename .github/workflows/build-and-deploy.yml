@@ -21,7 +21,7 @@ jobs:
         with:
           node-version: 24
       - name: Install node dependencies
-        run: npm install
+        run: npm ci
       - name: Check URLs
         uses: lycheeverse/lychee-action@v2
         with:
