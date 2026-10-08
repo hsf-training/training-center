@@ -1,0 +1,28 @@
+---
+import { getCollection, getEntry } from "astro:content";
+import Layout from "../layouts/Layout.astro";
+import Catalog from "../components/Catalog.jsx";
+
+const images = import.meta.glob<string>("../images/*", {
+  eager: true,
+  query: "?url",
+  import: "default",
+});
+
+const tutorials = (await getCollection("tutorials"))
+  .sort((a, b) => a.data.order - b.data.order)
+  .map(({ data }) => ({
+    ...data,
+    imageSrc: images[`../images/${data.image ?? "hsf.svg"}`],
+  }));
+
+const curriculum = await getEntry("curricula", "default");
+const curriculaGroups = curriculum!.data.groups.map((group) => ({
+  ...group,
+  modules: group.modules.map((module) => module.id.id),
+}));
+---
+
+<Layout title="Home Page">
+  <Catalog client:load tutorials={tutorials} curriculaGroups={curriculaGroups} />
+</Layout>

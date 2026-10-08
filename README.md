@@ -10,12 +10,27 @@ This project is about creating a new training center that turns the static page 
 
 ## Run it
 
+The website is built with [Astro](https://astro.build/).
+
 ```bash
 # once
 npm install
-# always
-npm run develop
+# start a development server at http://localhost:4321/training-center/
+npm run dev
+# build the static website into dist/
+npm run build
 ```
+
+## Adding training material
+
+All tutorials are listed in [`data/data.yaml`](data/data.yaml), and the curriculum
+shown on the front page is defined in [`data/curricula.yaml`](data/curricula.yaml).
+Images referenced by the `image` field go in [`src/images/`](src/images/).
+
+Both files are validated when building the website (see
+[`src/content.config.ts`](src/content.config.ts)), so typos in field names, invalid
+values, missing images, or curriculum entries that don't match a tutorial `id` will
+make the build fail with an error pointing to the problem.
 
 ## Contributors ✨
 

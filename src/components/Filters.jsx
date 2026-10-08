@@ -1,111 +1,106 @@
 import React from "react";
-import { useState, useEffect } from "react";
 
 // components
-import data from "../../data/data.yaml";
 import Select from "react-select";
 
 // styles
 import "../styles/filters.css";
 
+// Define the options displayed in the filter UI elements
+// ------------------------------------------------------
+
+// status filter options
+const statusFilter = [
+  { label: "Stable", value: "stable", isDefault: true },
+  { label: "Beta", value: "beta", isDefault: true },
+  { label: "Alpha", value: "alpha" },
+];
+
+// level filter options
+const levelFilter = [
+  { label: "Beginner", value: "beginner", isDefault: true },
+  { label: "Advanced", value: "advanced", isDefault: true },
+];
+
+// default search query, matching the isDefault values in filter options
+export const defaultQuery = {
+  text: "",
+  status: statusFilter.filter((option) => option.isDefault).map((e) => e.value),
+  language: [],
+  video: false,
+  level: levelFilter.filter((option) => option.isDefault).map((e) => e.value),
+};
+
+// Given a query, return the filtered tutorials
+// --------------------------------------------
+export const filterTutorials = (tutorials, query) => {
+  let filteredTuts = tutorials;
+
+  if (query.text !== "") {
+    filteredTuts = filteredTuts.filter((tut) => {
+      return (
+        tut.name.toLowerCase().includes(query.text.toLowerCase()) ||
+        tut.description.toLowerCase().includes(query.text.toLowerCase())
+      );
+    });
+  }
+
+  if (query.status.length !== 0) {
+    filteredTuts = filteredTuts.filter((tut) => {
+      return query.status.includes(tut.status);
+    });
+  }
+
+  if (query.language.length !== 0) {
+    let just = [];
+    filteredTuts.forEach((tut) => {
+      query.language.forEach((qLang) => {
+        if (tut.language && tut.language.includes(qLang)) {
+          return just.push(tut);
+        } else if (qLang === "other" && !tut.language) {
+          return just.push(tut);
+        }
+      });
+    });
+    filteredTuts = just;
+  }
+
+  if (query.video !== false) {
+    filteredTuts = filteredTuts.filter((tut) => {
+      return tut.videos !== "";
+    });
+  }
+
+  if (query.level.length !== 0) {
+    let just = [];
+    filteredTuts.forEach((tut) => {
+      query.level.forEach((qlevel) => {
+        if (tut.level === undefined || tut.level.includes(qlevel)) {
+          return just.push(tut);
+        }
+      });
+    });
+    filteredTuts = just;
+  }
+
+  // This should be last: Filter any duplicates that
+  // can be introduced by the filters above
+  filteredTuts = [...new Set(filteredTuts)];
+
+  return filteredTuts;
+};
+
 // markup
-const Filters = ({ setTuts }) => {
-  // Define the options displayed in the filter UI elements
-  // ------------------------------------------------------
-
-  // status filter options
-  const statusFilter = [
-    { label: "Stable", value: "stable", isDefault: true },
-    { label: "Beta", value: "beta", isDefault: true },
-    { label: "Alpha", value: "alpha" },
-  ];
-
-  // level filter options
-  const levelFilter = [
-    { label: "Beginner", value: "beginner", isDefault: true },
-    { label: "Advanced", value: "advanced", isDefault: true },
-  ];
+const Filters = ({ tutorials, query, setQuery }) => {
   // language filter options
-  const allLanguages = data.reduce(
+  const allLanguages = tutorials.reduce(
     (acc, tut) => acc.concat(tut.language || []),
     [],
   );
-  let uniqueLanguages = [...new Set(allLanguages)].map((lang) => ({
+  const languageFilter = [...new Set(allLanguages)].map((lang) => ({
     label: lang.charAt(0).toUpperCase() + lang.slice(1),
     value: lang,
   }));
-  const languageFilter = uniqueLanguages;
-
-  // search query state
-  // IMPORTANT: Should match isDefault values in filter options
-  const [query, setQuery] = useState({
-    text: "",
-    status: statusFilter
-      .filter((option) => option.isDefault)
-      .map((e) => e.value),
-    language: [],
-    video: false,
-    level: levelFilter.filter((option) => option.isDefault).map((e) => e.value),
-  });
-
-  // Given a query, filter the tutorials and update the state
-  // --------------------------------------------------------
-  useEffect(() => {
-    let filteredTuts = data;
-
-    if (query.text !== "") {
-      filteredTuts = filteredTuts.filter((tut) => {
-        return (
-          tut.name.toLowerCase().includes(query.text.toLowerCase()) ||
-          tut.description.toLowerCase().includes(query.text.toLowerCase())
-        );
-      });
-    }
-
-    if (query.status.length !== 0) {
-      filteredTuts = filteredTuts.filter((tut) => {
-        return query.status.includes(tut.status);
-      });
-    }
-
-    if (query.language.length !== 0) {
-      let just = [];
-      filteredTuts.forEach((tut) => {
-        query.language.forEach((qLang) => {
-          if (tut.language && tut.language.includes(qLang)) {
-            return just.push(tut);
-          } else if (qLang === "other" && !tut.language) {
-            return just.push(tut);
-          }
-        });
-      });
-      filteredTuts = just;
-    }
-
-    if (query.video !== false) {
-      filteredTuts = filteredTuts.filter((tut) => {
-        return tut.videos !== "";
-      });
-    }
-
-    if (query.level.length !== 0) {
-      let just = [];
-      filteredTuts.forEach((tut) => {
-        query.level.forEach((qlevel) => {
-          if (tut.level === undefined || tut.level.includes(qlevel)) {
-            return just.push(tut);
-          }
-        });
-      });
-      filteredTuts = just;
-    }
-
-    // This should be last: Filter any duplicates that
-    // can be introduced by the filters above
-    filteredTuts = [...new Set(filteredTuts)];
-
-    setTuts(filteredTuts);
-  }, [query, setTuts]);
 
   // Return HTML control elements
   // ----------------------------
@@ -129,6 +124,7 @@ const Filters = ({ setTuts }) => {
           {/* level-input */}
           <div className="level-input" title="Level">
             <Select
+              instanceId="level"
               className="select"
               closeMenuOnSelect={false}
               isMulti
@@ -145,6 +141,7 @@ const Filters = ({ setTuts }) => {
           {/* status-input */}
           <div className="status-input" title="Status">
             <Select
+              instanceId="status"
               className="select"
               closeMenuOnSelect={false}
               isMulti
@@ -161,6 +158,7 @@ const Filters = ({ setTuts }) => {
           {/* language-input */}
           <div className="language-input" title="Language">
             <Select
+              instanceId="language"
               className="select"
               closeMenuOnSelect={false}
               isMulti

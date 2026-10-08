@@ -8,8 +8,6 @@ import "../styles/tutCard.css";
 import { AiFillGithub } from "react-icons/ai";
 import { MdVideoLibrary } from "react-icons/md";
 
-const images = require.context("../images");
-
 const ExternalLinkIcon = () => (
   <svg
     aria-hidden="true"
@@ -27,7 +25,7 @@ const ExternalLinkIcon = () => (
 );
 
 // markup
-const Tutcard = ({ tut }) => {
+const TutCard = ({ tut }) => {
   const handleCardClick = () => {
     window.open(tut.webpage, "_blank", "noopener");
   };
@@ -62,7 +60,7 @@ const Tutcard = ({ tut }) => {
       <div className="tutCardImg">
         <img
           className="hero-image"
-          src={images("./" + (tut.image ? tut.image : "hsf.svg")).default}
+          src={tut.imageSrc}
           height={300}
           alt={tut.name}
         ></img>
@@ -130,4 +128,4 @@ const Tutcard = ({ tut }) => {
   );
 };
 
-export default Tutcard;
+export default TutCard;

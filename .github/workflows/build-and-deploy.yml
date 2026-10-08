@@ -19,7 +19,7 @@ jobs:
       - name: Setup node.js
         uses: actions/setup-node@v7
         with:
-          node-version: 20
+          node-version: 24
       - name: Install node dependencies
         run: npm install
       - name: Check URLs
@@ -28,9 +28,9 @@ jobs:
           args: --verbose --no-progress --max-concurrency 4 --timeout 20 data/data.yaml README.md
       - name: Build site
         run: |
-          PREFIX_PATHS=true npm run build
+          npm run build
           mkdir website
-          mv public website/training-center
+          mv dist website/training-center
           cp redirect.html website/index.html
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v5
