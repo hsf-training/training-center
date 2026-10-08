@@ -1,0 +1,13 @@
+# Netlify deploy previews for pull requests
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "24"
+
+# The site is built to be served under /training-center/, as on GitHub Pages
+[[redirects]]
+  from = "/training-center/*"
+  to = "/:splat"
+  status = 200
