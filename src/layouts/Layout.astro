@@ -7,10 +7,11 @@ import "../styles/globalStyle.css";
 import "../styles/layout.css";
 
 interface Props {
-  title: string;
+  title?: string;
 }
 
 const { title } = Astro.props;
+const siteTitle = "HSF Training Center";
 const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 ---
 
@@ -24,7 +25,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
       content="Training and educational material for the High Energy Physics community."
     />
     <link rel="icon" type="image/svg+xml" href={`${base}/favicon.svg`} />
-    <title>{title} | HSF Training Center</title>
+    <title>{title ? `${title} | ${siteTitle}` : siteTitle}</title>
     <script
       is:inline
       defer
@@ -36,7 +37,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
     <nav>
       <div class="container">
         <a
-          title="HSF Training Center"
+          title={siteTitle}
           href={`${base}/`}
           style="display: flex; align-items: center; gap: 0.5rem"
         >
@@ -71,7 +72,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 
     {/* hero div */}
     <div class="hero">
-      <h2>HSF Training Center</h2>
+      <h1>{siteTitle}</h1>
       <p>
         Training and educational material for the High Energy Physics community.
       </p>
@@ -83,7 +84,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
     <footer>
       <div class="container">
         <p>
-          Copyright 2026{" "}
+          Copyright {new Date().getFullYear()}{" "}
           <a href="https://hepsoftwarefoundation.org/" target="_blank" rel="noopener">
             HEP Software Foundation
           </a>{" "}

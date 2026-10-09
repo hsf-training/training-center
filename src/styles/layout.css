@@ -37,14 +37,12 @@ nav ul li a:hover {
   background-color: #111827;
   color: #9ca3af;
   width: 100%;
-  top: 3rem;
-  left: 0;
   padding: calc((100vw - (min(100%, 1000px) - 2rem)) / 2 + 1.5rem);
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
 
-.hero h2 {
+.hero h1 {
   font-size: 1.3rem;
   font-weight: 600;
 }
@@ -101,7 +99,7 @@ footer a:hover {
   .hero {
     padding: 1rem;
   }
-  .hero h2 {
+  .hero h1 {
     font-size: 1.1rem;
   }
   .hero p {

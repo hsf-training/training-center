@@ -23,6 +23,6 @@ const curriculaGroups = curriculum!.data.groups.map((group) => ({
 }));
 ---
 
-<Layout title="Home Page">
+<Layout>
   <Catalog client:load tutorials={tutorials} curriculaGroups={curriculaGroups} />
 </Layout>
