@@ -34,7 +34,6 @@ make the build fail with an error pointing to the problem.
 
 ## Contributors ✨
 
-This website is based on a prototype from [@aniumbott](https://github.com/Aniumbott/).
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/en/reference/emoji-key/)):
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
