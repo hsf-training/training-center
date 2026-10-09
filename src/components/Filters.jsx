@@ -2,6 +2,7 @@ import React from "react";
 
 // components
 import Select from "react-select";
+import { stripTags } from "./TutCard";
 
 // styles
 import "../styles/filters.css";
@@ -37,10 +38,11 @@ export const filterTutorials = (tutorials, query) => {
   let filteredTuts = tutorials;
 
   if (query.text !== "") {
+    const text = query.text.toLowerCase();
     filteredTuts = filteredTuts.filter((tut) => {
       return (
-        tut.name.toLowerCase().includes(query.text.toLowerCase()) ||
-        tut.description.toLowerCase().includes(query.text.toLowerCase())
+        stripTags(tut.name).toLowerCase().includes(text) ||
+        stripTags(tut.description).toLowerCase().includes(text)
       );
     });
   }
@@ -112,6 +114,7 @@ const Filters = ({ tutorials, query, setQuery }) => {
         <div className="text-input" title="Search Anything">
           <input
             type="text"
+            aria-label="Search tutorials"
             placeholder="Search Anything..."
             onChange={(e) => {
               setQuery({ ...query, text: e.target.value });

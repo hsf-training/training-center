@@ -28,16 +28,16 @@ const Catalog = ({ tutorials, curriculaGroups }) => {
         <div className="tuts-container">
           {curriculaGroups.map((group, key) => {
             return (
-              <div className="curriculumGroup-container" key={key}>
+              <div className="curriculumGroup-container" key={group.name}>
                 {key === 0 ? "" : <br />}
                 <h3>{group.name}</h3>
                 {group.description}
                 <div className="tuts-container">
-                  {group.modules.map((id, key) => {
+                  {group.modules.map((id) => {
                     // don't use tuts here, the filters might have modified it
                     const tut = tutorials.find((x) => x.id === id);
                     return (
-                      <div className="tutCard-container" key={key}>
+                      <div className="tutCard-container" key={id}>
                         <TutCard tut={tut} />
                       </div>
                     );
@@ -62,9 +62,9 @@ const Catalog = ({ tutorials, curriculaGroups }) => {
             </div>
           ) : (
             // if tuts found
-            tuts.map((tut, key) => {
+            tuts.map((tut) => {
               return (
-                <div className="tutCard-container" key={key}>
+                <div className="tutCard-container" key={tut.id}>
                   <TutCard tut={tut} />
                 </div>
               );

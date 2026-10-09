@@ -13,10 +13,8 @@
   "dependencies": {
     "@astrojs/react": "^7.0.1",
     "astro": "^7.3.8",
-    "html-react-parser": "^6.1.8",
     "react": "^19.3.0",
     "react-dom": "^19.3.0",
-    "react-icons": "^5.7.0",
     "react-select": "^5.10.2",
     "react-tabs": "^6.1.1",
     "yaml": "^2.9.1"
