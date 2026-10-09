@@ -1,25 +1,49 @@
 # Training Center
 
-[Click here for the deployed webpage](https://hsf-training.org)
+The HSF Training Center is a catalog of training material for the High Energy
+Physics (HEP) community, maintained by the
+[HSF Training group](https://hepsoftwarefoundation.org/activities/training.html)
+together with [IRIS-HEP](https://iris-hep.org/). It is deployed at
+[hsf-training.org/training-center](https://hsf-training.org/training-center/).
 
-## The project
+It brings together training modules from HSF, the Software Carpentries, and other
+organizations, and offers two views:
 
-There is a large number of training resources for newcomers in the field of High Energy Physics. The [HSF Training group](https://hepsoftwarefoundation.org/activities/training.html) together with [IRIS-HEP](https://iris-hep.org/) has started to compile a curriculum of such training modules that helps to get beginners up to speed quickly. However, the [current listing](https://hepsoftwarefoundation.org/training/curriculum.html) in the form of a static table is quickly becoming overwhelming, and we cannot include many resources because of space limitations.
+- **Curriculum**: a curated selection of modules, grouped by topic, that gets
+  newcomers to HEP up to speed with the software skills they need.
+- **All Tutorials**: the complete catalog, which can be searched and filtered by
+  level, status, programming language, and availability of videos.
 
-This project is about creating a new training center that turns the static page into a dynamic list of training content that can be filtered by attributes such as programming language, common tasks, type of training, HEP experiment, etc.
+The Training Center replaces the legacy
+[static curriculum table](https://hepsoftwarefoundation.org/training/curriculum.html)
+on the HSF website, which now redirects here.
 
 ## Run it
+
+The website is built with [Astro](https://astro.build/).
 
 ```bash
 # once
 npm install
-# always
-npm run develop
+# start a development server at http://localhost:4321/training-center/
+npm run dev
+# build the static website into dist/
+npm run build
 ```
+
+## Adding training material
+
+All tutorials are listed in [`data/data.yaml`](data/data.yaml), and the curriculum
+shown on the front page is defined in [`data/curricula.yaml`](data/curricula.yaml).
+Images referenced by the `image` field go in [`src/images/`](src/images/).
+
+Both files are validated when building the website (see
+[`src/content.config.ts`](src/content.config.ts)), so typos in field names, invalid
+values, missing images, or curriculum entries that don't match a tutorial `id` will
+make the build fail with an error pointing to the problem.
 
 ## Contributors ✨
 
-This website is based on a prototype from [@aniumbott](https://github.com/Aniumbott/).
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/en/reference/emoji-key/)):
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->

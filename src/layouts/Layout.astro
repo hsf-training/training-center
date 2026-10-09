@@ -1,0 +1,97 @@
+---
+import hsfLogo from "../images/hsf.svg?url";
+import irisHepLogo from "../images/iris-hep.svg?url";
+
+// styles
+import "../styles/globalStyle.css";
+import "../styles/layout.css";
+
+interface Props {
+  title?: string;
+}
+
+const { title } = Astro.props;
+const siteTitle = "HSF Training Center";
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Training and educational material for the High Energy Physics community."
+    />
+    <link rel="icon" type="image/svg+xml" href={`${base}/favicon.svg`} />
+    <title>{title ? `${title} | ${siteTitle}` : siteTitle}</title>
+    <script
+      is:inline
+      defer
+      data-domain="hepsoftwarefoundation.org"
+      src="https://views.scientific-python.org/js/script.js"></script>
+  </head>
+  <body>
+    {/* navbar */}
+    <nav>
+      <div class="container">
+        <a
+          title={siteTitle}
+          href={`${base}/`}
+          style="display: flex; align-items: center; gap: 0.5rem"
+        >
+          <img src={hsfLogo} height="46" alt="hsf logo" />
+          <img src={irisHepLogo} height="46" alt="iris hep logo" />
+        </a>
+      </div>
+      <div class="container">
+        <ul class="navLinks">
+          <li class="navLinkItem">
+            <a href={`${base}/`} title="Home" class="navLinkText">Home</a>
+          </li>
+          <li class="navLinkItem">
+            <a href={`${base}/contribute/`} title="Contribute" class="navLinkText">
+              Contribute
+            </a>
+          </li>
+          <li class="navLinkItem">
+            <a
+              href="https://hepsoftwarefoundation.org/activities/training.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="About"
+              class="navLinkText"
+            >
+              About
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    {/* hero div */}
+    <div class="hero">
+      <h1>{siteTitle}</h1>
+      <p>
+        Training and educational material for the High Energy Physics community.
+      </p>
+    </div>
+
+    {/* main */}
+    <main><slot /></main>
+
+    <footer>
+      <div class="container">
+        <p>
+          Copyright {new Date().getFullYear()}{" "}
+          <a href="https://hepsoftwarefoundation.org/" target="_blank" rel="noopener">
+            HEP Software Foundation
+          </a>{" "}
+          and{" "}
+          <a href="https://iris-hep.org/" target="_blank" rel="noopener">IRIS-HEP</a>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -58,7 +58,7 @@
     - other
 - description: Building code is hard. <code>CMake</code> makes it easier.
   id: cmake
-  name: "Build systems:  <code>cmake</code>"
+  name: "Build systems: <code>cmake</code>"
   repository: https://github.com/hsf-training/hsf-training-cmake-webpage
   status: stable
   videos: ""
