@@ -39,6 +39,7 @@
     - name: "Data Analysis"
       description: "Machine learning and other analysis tools"
       modules:
+        - id: simpleanalysis
         - id: array
         - id: array-puzzles
         - id: ml-hep
