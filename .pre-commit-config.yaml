@@ -18,7 +18,7 @@ repos:
         args: ["-I", "codespell.txt"]
         exclude: '.*\.yml'
   - repo: https://github.com/rbubley/mirrors-prettier
-    rev: "v3.9.9"
+    rev: "v3.9.10"
     hooks:
       - id: prettier
   - repo: https://github.com/google/yamlfmt
