@@ -4,13 +4,13 @@ repos:
     hooks:
       - id: check-added-large-files
       - id: check-case-conflict
+      - id: check-symlinks
       - id: detect-private-key
       - id: end-of-file-fixer
       - id: trailing-whitespace
       - id: check-yaml
       - id: check-merge-conflict
-      - id: check-ast
-      - id: debug-statements
+      - id: mixed-line-ending
   - repo: https://github.com/codespell-project/codespell
     rev: "v2.4.3"
     hooks:
@@ -27,4 +27,6 @@ repos:
       - id: yamlfmt
 exclude: 'node_modules/\.*|.*\.svg|package-lock\.json'
 ci:
-  autoupdate_schedule: monthly
+  autoupdate_commit_msg: "chore(deps): update pre-commit hooks"
+  autofix_commit_msg: "style: pre-commit fixes"
+  autoupdate_schedule: "monthly"
